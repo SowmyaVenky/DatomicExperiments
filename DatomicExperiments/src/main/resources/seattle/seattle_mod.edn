@@ -1,0 +1,525 @@
+{:district/region :region/n, :district/name "North"}
+{:district/region :region/ne, :district/name "North East"}
+{:district/region :region/e, :district/name "East"}
+{:district/region :region/se, :district/name "South East"}
+{:district/region :region/s, :district/name "East"}
+{:district/region :region/sw, :district/name "South West"}
+{:district/region :region/w, :district/name "West"}
+{:district/region :region/nw, :district/name "North West"}
+{:district/region :region/e, :district/name "East"}
+{:community/category ["15th avenue residents"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "15th Ave Community", :community/url "http://groups.yahoo.com/group/15thAve_Community/" :neighborhood/name "Capitol Hill"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["neighborhood association"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "Admiral Neighborhood Association", :community/url "http://groups.yahoo.com/group/AdmiralNeighborhood/" :neighborhood/name "Admiral (West Seattle)"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["members of the Alki Community Council and residents of the Alki Beach neighborhood"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "Alki News", :community/url "http://groups.yahoo.com/group/alkibeachcommunity/" :neighborhood/name "Alki"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["news" "council meetings"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Alki News/Alki Community Council", :community/url "http://alkinews.wordpress.com/" :neighborhood/name "Alki"}
+{:district/region :region/w, :district/name "Downtown"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "All About Belltown", :community/url "http://www.belltown.org/" :neighborhood/name "Belltown"}
+{:district/region :region/s, :district/name "Greater Duwamish"}
+{:community/category ["neighborhood info"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "All About South Park", :community/url "http://www.allaboutsouthpark.com/" :neighborhood/name "South Park"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["arts"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "ArtsWest", :community/url "http://www.artswest.org/?q=node/28" :neighborhood/name "West Seattle"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["news" "human interest"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "At Large in Ballard", :community/url "http://blog.seattlepi.com/ballard/" :neighborhood/name "Ballard"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["news" "traffic" "planning"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Aurora Seattle", :community/url "http://www.auroraseattle.com/" :neighborhood/name "Regional Sites"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["personal ballard-centric blog"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Ballard Avenue", :community/url "http://www.ballardavenue.blogspot.com/" :neighborhood/name "Ballard"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Ballard Blog", :community/url "http://ballardblog.com/" :neighborhood/name "Ballard"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["chamber of commerce"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Ballard Chamber of Commerce", :community/url "http://www.ballardchamber.com/" :neighborhood/name "Ballard"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["district council"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Ballard District Council", :community/url "http://www.ballarddistrictcouncil.org/" :neighborhood/name "Ballard"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["restaurants" "nightlift" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Ballard Gossip Girl", :community/url "http://www.ballardgossipgirl.com/" :neighborhood/name "Ballard"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["historical society"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Ballard Historical Society", :community/url "http://www.ballardhistory.org/" :neighborhood/name "Ballard"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["Ballard parents"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "Ballard Moms", :community/url "http://groups.yahoo.com/group/BallardMoms/" :neighborhood/name "Ballard"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["neighborhood residents"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "Ballard Neighbor Connection", :community/url "http://groups.yahoo.com/group/BallardNeighborConnection/" :neighborhood/name "Ballard"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["news" "personal"], :community/orgtype :community.orgtype/personal, :community/type :community.type/blog, :community/name "ballardite blog", :community/url "http://www.ballardite.blogspot.com/" :neighborhood/name "Ballard"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["news" "home sales" "crime"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Beach Drive Blog", :community/url "http://www.mortgageporter.com/beach_drive/" :neighborhood/name "Alki"}
+{:district/region :region/se, :district/name "Greater Duwamish"}
+{:community/category ["community" "public safety"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Beacon Hill Alliance of Neighbors", :community/url "http://www.cityofseattle.net/ban/" :neighborhood/name "Beacon Hill"}
+{:district/region :region/se, :district/name "Greater Duwamish"}
+{:community/category ["news" "events" "food" "nightlife" "criminal activity"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Beacon Hill Blog", :community/url "http://beaconhill.seattle.wa.us/" :neighborhood/name "Beacon Hill"}
+{:district/region :region/se, :district/name "Greater Duwamish"}
+{:community/category ["criminal activity"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "Beacon Hill Burglaries", :community/url "http://maps.google.com/maps/ms?ie=UTF8&hl=en&msa=0&msid=107398592337461190820.000449fcf97ff8bfbe281&z=14or" :neighborhood/name "Beacon Hill"}
+{:district/region :region/se, :district/name "Greater Duwamish"}
+{:community/category ["news" "announcements" "community concerns"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/wiki, :community/name "Beacon Hill Community Site", :community/url "http://beaconhillcommunity.wetpaint.com/" :neighborhood/name "Beacon Hill"}
+{:district/region :region/w, :district/name "Downtown"}
+{:community/category ["news" "events"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "belltown", :community/url "http://www.belltownpeople.com/" :neighborhood/name "Belltown"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["community group"], :community/type :community.type/website, :community/name "Bike Works!", :community/url "http://www.bikeworks.org/" :neighborhood/name "Columbia City"}
+{:district/region :region/sw, :district/name "Greater Duwamish"}
+{:community/category ["news" "events" "911 blotter"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Blogging Georgetown", :community/url "http://www.blogginggeorgetown.com/" :neighborhood/name "Georgetown"}
+{:district/region :region/sw, :district/name "Greater Duwamish"}
+{:community/category ["news" "events" "911 blotter"], :community/orgtype :community.orgtype/community, :community/type :community.type/facebook-page, :community/name "Blogging Georgetown", :community/url "http://www.facebook.com/blogginggeorgetown" :neighborhood/name "Georgetown"}
+{:district/region :region/sw, :district/name "Northwest"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "Broadview Community Council", :community/url "http://groups.google.com/group/broadview-community-council" :neighborhood/name "Broadview"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Broadview Community Council", :community/url "http://www.broadviewseattle.org/" :neighborhood/name "Broadview"}
+{:district/region :region/e, :district/name "East"}
+{:community/category ["community council" "news" "events"], :community/orgtype :community.orgtype/community, :community/type :community.type/wiki, :community/name "Capitol Hill Community Council", :community/url "http://chcc.wikidot.com/" :neighborhood/name "Capitol Hill"}
+{:district/region :region/e, :district/name "East"}
+{:community/category ["affordable housing"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Capitol Hill Housing", :community/url "http://capitolhillhousing.org/" :neighborhood/name "Capitol Hill"}
+{:district/region :region/e, :district/name "East"}
+{:community/category ["local miscellany"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Capitol Hill Triangle", :community/url "http://chtriangle.blogspot.com/" :neighborhood/name "Capitol Hill"}
+{:district/region :region/e, :district/name "Central"}
+{:community/category ["festival planning association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Central Area Community Festival Association", :community/url "http://www.cacf.com/" :neighborhood/name "Central District"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Central Ballard Community Council", :community/url "http://www.neighborhoodlink.com/seattle/cbcc/" :neighborhood/name "Ballard"}
+{:district/region :region/e, :district/name "Central"}
+{:community/category ["news" "events" "food" "drink" "reviews"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Central District News", :community/url "http://www.centraldistrictnews.com/" :neighborhood/name "Central District"}
+{:district/region :region/w, :district/name "Downtown"}
+{:community/category ["business improvement association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Chinatown/International District", :community/url "http://www.cidbia.org/" :neighborhood/name "International District"}
+{:district/region :region/w, :district/name "Downtown"}
+{:community/category ["referral" "advocacy" "support services"], :community/orgtype :community.orgtype/nonprofit, :community/type :community.type/website, :community/name "Chinese Information and Service Center", :community/url "http://www.cisc-seattle.org/" :neighborhood/name "International District"}
+{:district/region :region/e, :district/name "East"}
+{:community/category ["news" "events" "food" "drink" "criminal activity"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "CHS Capitol Hill Seattle Blog", :community/url "http://www.capitolhillseattle.com/" :neighborhood/name "Capitol Hill"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["neighborhood community site; buying/selling" "restaurants" "favorite places" "etc."], :community/orgtype :community.orgtype/community, :community/type :community.type/wiki, :community/name "Columbia Citizens", :community/url "http://columbiacitizens.net/" :neighborhood/name "Columbia City"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["twitter for Columbia Citizens"], :community/orgtype :community.orgtype/community, :community/type :community.type/twitter, :community/name "Columbia Citizens", :community/url "http://twitter.com/CCitizens" :neighborhood/name "Columbia City"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["neighborhood community site; buying/selling" "restaurants" "favorite places" "etc."], :community/orgtype :community.orgtype/community, :community/type :community.type/facebook-page, :community/name "Columbia Citizens", :community/url "http://www.facebook.com/pages/Columbia-Citizens/48558627705" :neighborhood/name "Columbia City"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["news" "events" "food" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Columbia City Blog", :community/url "http://www.columbiacityblog.com/" :neighborhood/name "Columbia City"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["business association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Columbia City, Seattle", :community/url "http://www.columbiacityseattle.com/" :neighborhood/name "Columbia City"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["portal"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Columbia City: Rainier Valley", :community/url "http://www.rainiervalley.org/" :neighborhood/name "Rainier Valley"}
+{:district/region :region/sw, :district/name "Delridge"}
+{:community/category ["sustainable food"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Community Harvest of Southwest Seattle", :community/url "http://gleanit.org" :neighborhood/name "West Seattle"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["neighborhood-issues" "neighborhood-planning" "news"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Crown Hill Neighbors", :community/url "http://www.crownhillneighbors.org" :neighborhood/name "Crown Hill"}
+{:district/region :region/sw, :district/name "Delridge"}
+{:community/category ["community organization"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Delridge Grassroots Leadership", :community/url "http://delridge.blogspot.com/" :neighborhood/name "Delridge"}
+{:district/region :region/sw, :district/name "Delridge"}
+{:community/category ["neighborhood association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Delridge Neighborhoods Development Association", :community/url "http://www.dnda.org/" :neighborhood/name "Delridge"}
+{:district/region :region/sw, :district/name "Delridge"}
+{:community/category ["produce coop"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Delridge Produce Cooperative", :community/url "http://sites.google.com/site/delridgeproducecooperative/" :neighborhood/name "Delridge"}
+{:district/region :region/w, :district/name "Lake Union"}
+{:community/category ["news" "events" "shopping" "dining"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/website, :community/name "Discover SLU", :community/url "http://www.discoverslu.com" :neighborhood/name "South Lake Union"}
+{:district/region :region/w, :district/name "Lake Union"}
+{:community/category ["news" "events" "shopping" "dining"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/facebook-page, :community/name "Discover SLU", :community/url "http://www.facebook.com/discoverslu" :neighborhood/name "South Lake Union"}
+{:district/region :region/w, :district/name "Lake Union"}
+{:community/category ["news" "events" "shopping" "dining"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/twitter, :community/name "Discover SLU", :community/url "http://www.twitter.com/southlakeunion" :neighborhood/name "South Lake Union"}
+{:district/region :region/w, :district/name "Downtown"}
+{:community/category ["news and events"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Downtown Dispatch", :community/url "http://downtowndispatch.com/" :neighborhood/name "Downtown"}
+{:district/region :region/w, :district/name "Downtown"}
+{:community/category ["business association"], :community/type :community.type/website, :community/name "Downtown Seattle Association", :community/url "http://www.downtownseattle.com/" :neighborhood/name "Downtown"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["community association" "news" "events" "meeting"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "East Ballard Community Association Blog", :community/url "http://eastballard.wordpress.com/" :neighborhood/name "Ballard"}
+{:district/region :region/w, :district/name "Lake Union"}
+{:community/category ["news" "traffic" "events" "criminal activity"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Eastlake Ave. ", :community/url "http://eastlakeave.neighborlogs.com/" :neighborhood/name "Eastlake"}
+{:district/region :region/w, :district/name "Lake Union"}
+{:community/category ["updates on blog posts"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Eastlake Ave. ", :community/url "http://twitter.com/eastlakeave" :neighborhood/name "Eastlake"}
+{:district/region :region/w, :district/name "Lake Union"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Eastlake Community Council", :community/url "http://www.eastlakeseattle.org/" :neighborhood/name "Eastlake"}
+{:district/region :region/w, :district/name "Lake Union"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/facebook-page, :community/name "Eastlake Community Council", :community/url "http://www.facebook.com/group.php?gid=7145111961" :neighborhood/name "Eastlake"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["community association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Fauntleroy Community Association", :community/url "http://fauntleroy.net/" :neighborhood/name "Fauntleroy"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["community assocation"], :community/orgtype :community.orgtype/community, :community/type :community.type/facebook-page, :community/name "Fauntleroy Community Association", :community/url "http://www.facebook.com/pages/Seattle-WA/Fauntleroy-Community-Association/63181596775?v=wall&viewas=1779772562&ref=ts" :neighborhood/name "Fauntleroy"}
+{:district/region :region/e, :district/name "East"}
+{:community/category ["neighborhood association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "First Hill Improvement Association", :community/url "http://www.firsthill.org/" :neighborhood/name "First Hill"}
+{:district/region :region/nw, :district/name "Lake Union"}
+{:community/category ["fremont arts council members"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "Fremont Arts Council", :community/url "http://groups.yahoo.com/group/fremontartscouncil/" :neighborhood/name "Fremont"}
+{:district/region :region/nw, :district/name "Lake Union"}
+{:community/category ["communtiy group"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Fremont Arts Council", :community/url "http://www.fremontartscouncil.org/" :neighborhood/name "Fremont"}
+{:district/region :region/nw, :district/name "Lake Union"}
+{:community/category ["chamber of commerce"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Fremont Chamber of Commerce", :community/url "http://www.fremontseattle.com/" :neighborhood/name "Fremont"}
+{:district/region :region/nw, :district/name "Lake Union"}
+{:community/category ["news" "events" "food" "reviews"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/twitter, :community/name "Fremont Universe", :community/url "http://twitter.com/fremontuniverse" :neighborhood/name "Fremont"}
+{:district/region :region/nw, :district/name "Lake Union"}
+{:community/category ["news" "events" "food" "reviews"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/facebook-page, :community/name "Fremont Universe", :community/url "http://www.facebook.com/pages/Fremont-Universe-Seattle/88279594341?ref=s" :neighborhood/name "Fremont"}
+{:district/region :region/nw, :district/name "Lake Union"}
+{:community/category ["news" "events" "food" "reviews"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Fremont Universe", :community/url "http://www.fremontuniverse.com/" :neighborhood/name "Fremont"}
+{:district/region :region/w, :district/name "Magnolia/Queen Anne"}
+{:community/category ["park issues"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Friends of Discovery Park", :community/url "http://www.friendsdiscoverypark.org/" :neighborhood/name "Magnolia"}
+{:district/region :region/nw, :district/name "Lake Union"}
+{:community/category ["community organization"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Friends of Fremont Peak Park", :community/url "http://www.fremontpeakpark.org/" :neighborhood/name "Fremont"}
+{:district/region :region/e, :district/name "Central"}
+{:community/category ["park issues"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Friends of Frink Park", :community/url "http://www.frinkpark.org/" :neighborhood/name "Central District"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["neighborhood group"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Friends of Green Lake", :community/url "http://www.friendsofgreenlake.org/" :neighborhood/name "Green Lake"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["park issues"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Friends of Seward Park", :community/url "http://www.sewardpark.org/" :neighborhood/name "Seward Park"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["neighborhood council"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Genesee-Schmitz Neighborhood Council", :community/url "http://genesee-schmitz.org/" :neighborhood/name "Genesee-Schmitz"}
+{:district/region :region/sw, :district/name "Greater Duwamish"}
+{:community/category ["community arts"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Georgetown Art Center", :community/url "http://georgetownartcenter.blogspot.com/" :neighborhood/name "Georgetown"}
+{:district/region :region/sw, :district/name "Greater Duwamish"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Georgetown Neighborhood", :community/url "http://www.georgetownneighborhood.com/" :neighborhood/name "Georgetown"}
+{:district/region :region/sw, :district/name "Greater Duwamish"}
+{:community/category ["community members"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "Georgetown Seattle", :community/url "http://groups.yahoo.com/group/Georgetown-Seattle/" :neighborhood/name "Georgetown"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Greenlake Community Council", :community/url "http://www.greenlakecommunitycouncil.org/" :neighborhood/name "Green Lake"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["events" "for sale" "services"], :community/orgtype :community.orgtype/community, :community/type :community.type/wiki, :community/name "Greenlake Community Wiki", :community/url "http://greenlake.wetpaint.com/" :neighborhood/name "Green Lake"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["neighborhood association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Greenwood Aurora Involved Neighbors", :community/url "http://www.gainseattle.com/" :neighborhood/name "Greenwood"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["news" "events"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Greenwood Blog", :community/url "http://www.greenwoodblog.com/" :neighborhood/name "Greenwood"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Greenwood Community Council", :community/url "http://www.greenwoodcommunitycouncil.org/about/" :neighborhood/name "Greenwood"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "Greenwood Community Council Announcements", :community/url "http://groups.yahoo.com/group/Greenwood_News/" :neighborhood/name "Greenwood"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "Greenwood Community Council Discussion", :community/url "http://groups.yahoo.com/group/greenwood-discussion/" :neighborhood/name "Greenwood"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["chamber of commerce"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Greenwood Phinney Chamber of Commerce", :community/url "http://www.greenwood-phinney.com/" :neighborhood/name "Greenwood"}
+{:district/region :region/n, :district/name "North"}
+{:community/category ["community organization"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Haller Lake Community Club", :community/url "http://www.hallerlake.info/" :neighborhood/name "Haller Lake"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Hawthorne Hills Community Website", :community/url "http://www.seattle.gov/hawthornehills/" :neighborhood/name "Hawthorne Hills"}
+{:district/region :region/sw, :district/name "Delridge"}
+{:community/category ["community group"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Highland Park Action Committee", :community/url "http://www.highlandpk.net/" :neighborhood/name "Highland Park"}
+{:district/region :region/sw, :district/name "Delridge"}
+{:community/category ["neighborhood group"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Highland Park Improvement Club", :community/url "http://www.hpic1919.org/" :neighborhood/name "Highland Park"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["food" "nightlife" "shopping" "services"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/website, :community/name "InBallard", :community/url "http://inballard.com/" :neighborhood/name "Ballard"}
+{:district/region :region/nw, :district/name "Magnolia/Queen Anne"}
+{:community/category ["news" "sports"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Interbay District Blog", :community/url "http://interbayneighborhood.neighborlogs.com/" :neighborhood/name "Interbay"}
+{:district/region :region/nw, :district/name "Magnolia/Queen Anne"}
+{:community/category ["neighborhood association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Interbay Neighborhood Association", :community/url "http://www.our-interbay.org/" :neighborhood/name "Interbay"}
+{:district/region :region/se, :district/name "Greater Duwamish"}
+{:community/category ["community"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Jefferson Park Alliance", :community/url "http://www.cityofseattle.net/commnty/Beacon/groups/jpa/" :neighborhood/name "Beacon Hill"}
+{:district/region :region/w, :district/name "Southwest"}
+{:community/category ["events" "meetings"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Junction Neighborhood Organization", :community/url "http://www.wsjuno.com/" :neighborhood/name "Junction"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - Ballard", :community/url "http://ballard.komonews.com/" :neighborhood/name "Ballard"}
+{:district/region :region/se, :district/name "Greater Duwamish"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - Beacon Hill", :community/url "http://beaconhill.komonews.com" :neighborhood/name "Beacon Hill"}
+{:district/region :region/e, :district/name "East"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - Captol Hill", :community/url "http://capitolhill.komonews.com" :neighborhood/name "Capitol Hill"}
+{:district/region :region/e, :district/name "East"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - Central District", :community/url "http://centraldistrict.komonews.com" :neighborhood/name "Central District"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - Columbia City", :community/url "http://columbiacity.komonews.com" :neighborhood/name "Columbia City"}
+{:district/region :region/w, :district/name "Downtown"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - Downtown", :community/url "http://downtown.komonews.com" :neighborhood/name "Downtown"}
+{:district/region :region/nw, :district/name "Lake Union"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - Fremont", :community/url "http://fremont.komonews.com" :neighborhood/name "Fremont"}
+{:district/region :region/sw, :district/name "Greater Duwamish"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - Georgetown", :community/url "http://georgetown.komonews.com" :neighborhood/name "Georgetown"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - Green Lake", :community/url "http://greenlake.komonews.com" :neighborhood/name "Green Lake"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - Greenwood-Phinney", :community/url "http://greenwood-phinney.komonews.com" :neighborhood/name "Greenwood-Phinney"}
+{:district/region :region/ne, :district/name "North"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - Lake City", :community/url "http://lakecity.komonews.com" :neighborhood/name "Lake City"}
+{:district/region :region/e, :district/name "East"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - Madison Park", :community/url "http://madisonpark.komonews.com" :neighborhood/name "Madison Park"}
+{:district/region :region/nw, :district/name "Magnolia/Queen Anne"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - Magnolia", :community/url "http://magnolia.komonews.com" :neighborhood/name "Magnolia"}
+{:district/region :region/n, :district/name "North"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - North Seattle", :community/url "http://northseattle.komonews.com" :neighborhood/name "North Seattle"}
+{:district/region :region/w, :district/name "Magnolia/Queen Anne"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - Queen Anne", :community/url "http://queenanne.komonews.com" :neighborhood/name "Queen Anne"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["news" "events" "human interest" "criminal activity" "food" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - Rainier Valley", :community/url "http://rainiervalley.komonews.com" :neighborhood/name "Rainier Valley"}
+{:district/region :region/w, :district/name "Lake Union"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - South Lake Union", :community/url "http://southlakeunion.komonews.com" :neighborhood/name "South Lake Union"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - U-District", :community/url "http://udistrict.komonews.com" :neighborhood/name "University District"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - View Ridge", :community/url "http://viewridge.komonews.com" :neighborhood/name "View Ridge"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - Wallingford", :community/url "http://wallingford.komonews.com" :neighborhood/name "Wallingford"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "KOMO Communities - West Seattle", :community/url "http://westseattle.komonews.com" :neighborhood/name "West Seattle"}
+{:district/region :region/ne, :district/name "North"}
+{:community/category ["news" "criminal activity" "food" "drink" "reviews"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Lake City Live", :community/url "http://www.lakecitylive.net/" :neighborhood/name "Lake City"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["community club"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Laurelhurst Community Club", :community/url "http://www.laurelhurstcc.com/" :neighborhood/name "Laurelhurst"}
+{:district/region :region/e, :district/name "Central"}
+{:community/category ["planning" "meeting times"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "Leschi Community Council", :community/url "http://groups.google.com/group/LeschiCC?hl=en" :neighborhood/name "Leschi"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["neighborhood council"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Licton Springs Neighborhood ", :community/url "http://www.lictonsprings.org/" :neighborhood/name "Licton Springs"}
+{:district/region :region/sw, :district/name "Delridge"}
+{:community/category ["watershed info"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Longfellow Creek Community Website", :community/url "http://www.longfellowcreek.org/" :neighborhood/name "Delridge"}
+{:district/region :region/e, :district/name "East"}
+{:community/category ["news" "housing prices" "events"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Madison Park Blogger", :community/url "http://madisonparkblogger.blogspot.com/" :neighborhood/name "Madison Park"}
+{:district/region :region/e, :district/name "East"}
+{:community/category ["business association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Madison Park Business Association", :community/url "http://www.madisonparkseattle.com/" :neighborhood/name "Madison Park"}
+{:district/region :region/e, :district/name "Central"}
+{:community/category ["community group (moms)"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "Madrona Moms", :community/url "http://health.groups.yahoo.com/group/MadronaMoms/" :neighborhood/name "Madrona"}
+{:district/region :region/e, :district/name "Central"}
+{:community/category ["neighborhood community site: buying/selling" "restaurants" "favorite places" "etc.  Also community association meeting minutes"], :community/orgtype :community.orgtype/community, :community/type :community.type/wiki, :community/name "Madrona Neighborhood", :community/url "http://madrona.wetpaint.com/" :neighborhood/name "Madrona"}
+{:district/region :region/w, :district/name "Magnolia/Queen Anne"}
+{:community/category ["planning issues"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Magnolia Action Group", :community/url "http://www.orgsites.com/wa/mag/" :neighborhood/name "Magnolia"}
+{:district/region :region/w, :district/name "Magnolia/Queen Anne"}
+{:community/category ["chamber of commerce"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Magnolia Chamber of Commerce", :community/url "http://www.magnoliachamber.org/" :neighborhood/name "Magnolia"}
+{:district/region :region/w, :district/name "Magnolia/Queen Anne"}
+{:community/category ["historical society"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Magnolia Historical Society", :community/url "http://www.magnoliahistoricalsociety.org/" :neighborhood/name "Magnolia"}
+{:district/region :region/w, :district/name "Magnolia/Queen Anne"}
+{:community/category ["planning issues"], :community/orgtype :community.orgtype/community, :community/type :community.type/wiki, :community/name "Magnolia is Really Part of Seattle", :community/url "http://sleeplessinmagnolia.ning.com/" :neighborhood/name "Magnolia"}
+{:district/region :region/w, :district/name "Magnolia/Queen Anne"}
+{:community/category ["neighborhood association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Magnolia Neighborhood Planning Council", :community/url "http://magnolianpc.com/" :neighborhood/name "Magnolia"}
+{:district/region :region/nw, :district/name "Magnolia/Queen Anne"}
+{:community/category ["news" "events" "criminal activity" "food"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/twitter, :community/name "Magnolia Voice", :community/url "http://twitter.com/magnoliavoice" :neighborhood/name "Magnolia"}
+{:district/region :region/nw, :district/name "Magnolia/Queen Anne"}
+{:community/category ["news" "events" "criminal activity" "food"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/facebook-page, :community/name "Magnolia Voice", :community/url "http://www.facebook.com/pages/Magnolia-Voice-Seattle/116057104388" :neighborhood/name "Magnolia"}
+{:district/region :region/w, :district/name "Magnolia/Queen Anne"}
+{:community/category ["news" "events" "criminal activity" "food"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Magnolia Voice", :community/url "http://www.magnoliavoice.com/" :neighborhood/name "Magnolia"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["garden"], :community/type :community.type/website, :community/name "Magnuson Community Garden", :community/url "http://cityofseattle.net/MAGNUSONGARDEN" :neighborhood/name "Laurelhurst"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["park issues"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Magnuson Environmental Stewardship Alliance", :community/url "http://mesaseattle.org/" :neighborhood/name "Laurelhurst"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["community council" "email list available"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Maple Leaf Community Council", :community/url "http://www.mapleleafcommunity.org/" :neighborhood/name "Maple Leaf"}
+{:district/region :region/n, :district/name "North"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/twitter, :community/name "Maple Leaf Life", :community/url "http://twitter.com/mapleleaflife" :neighborhood/name "Maple Leaf"}
+{:district/region :region/n, :district/name "North"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/facebook-page, :community/name "Maple Leaf Life", :community/url "http://www.facebook.com/pages/Seattle-WA/Maple-Leaf-Life/298056021657" :neighborhood/name "Maple Leaf"}
+{:district/region :region/n, :district/name "North"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Maple Leaf Life", :community/url "http://www.mapleleaflife.com/" :neighborhood/name "Maple Leaf"}
+{:district/region :region/s, :district/name "Greater Duwamish"}
+{:community/category ["farmers' market"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Market On Wheels", :community/url "http://marketonwheels.wordpress.com/" :neighborhood/name "South Park"}
+{:district/region :region/e, :district/name "East"}
+{:community/category ["neighborhood association; news" "events"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Miller Park Neighborhood Association", :community/url "http://millerparkseattle.blogspot.com/" :neighborhood/name "Miller Park"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["business association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "MLK Business Association", :community/url "http://www.mlkba.org/" :neighborhood/name "Rainier Valley"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["community association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Morgan Junction Community Association", :community/url "http://morganjunction.org/" :neighborhood/name "Morgan Junction"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["community club"], :community/type :community.type/email-list, :community/name "Mount Baker Community Club", :community/url "http://groups.yahoo.com/group/MBCCCommunityNotices/" :neighborhood/name "Mount Baker"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["community group"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Mount Baker Neighborhood ", :community/url "http://www.mountbaker.org/index.php" :neighborhood/name "Mount Baker"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["news" "events" "food"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "My Greenlake Blog", :community/url "http://www.mygreenlake.com/" :neighborhood/name "Green Lake"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "MyBallard", :community/url "http://www.myballard.com/" :neighborhood/name "Ballard"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "MyWallingford", :community/url "http://mywallingford.com" :neighborhood/name "Wallingford"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/twitter, :community/name "MyWallingford", :community/url "http://twitter.com/mywallingford" :neighborhood/name "Wallingford"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/facebook-page, :community/name "MyWallingford", :community/url "http://www.facebook.com/MyWallingford?ref=ts" :neighborhood/name "Wallingford"}
+{:district/region :region/sw, :district/name "Delridge"}
+{:community/category ["environmental conservation"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Nature Consortium", :community/url "http://www.naturec.org" :neighborhood/name "Delridge"}
+{:community/category ["15th avenue residents"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "15th Ave Community", :community/url "http://groups.yahoo.com/group/15thAve_Community/", :community/neighborhood "Capitol Hill"}{:neighborhood/name "Capitol Hill", :neighborhood/district :region/e}
+{:district/region :region/se, :district/name "Greater Duwamish"}
+{:community/category ["community members"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "nbeaconhillneighbors", :community/url "http://groups.yahoo.com/group/nbeaconhillneighbors/" :neighborhood/name "Beacon Hill"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["services portal"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "New Holly Neighborhood Campus", :community/url "http://www.newholly.org/" :neighborhood/name "Rainier Valley"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "New Rainier Vista", :community/url "http://newrainiervista.com/public/about/" :neighborhood/name "Rainier Beach"}
+{:district/region :region/se, :district/name "Greater Duwamish"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "North Beacon Hill", :community/url "http://north-beacon-hill.blogspot.com/" :neighborhood/name "Beacon Hill"}
+{:district/region :region/se, :district/name "Greater Duwamish"}
+{:community/category ["community group"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "North Beacon Hill Council", :community/url "http://www.cityofseattle.net/commnty/Beacon/groups/nbhc/" :neighborhood/name "Beacon Hill"}
+{:district/region :region/e, :district/name "East"}
+{:community/category ["meeting notes" "relevant news"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "North Capitol Hill Neighborhood Association", :community/url "http://www.nchna.com/" :neighborhood/name "Capitol Hill"}
+{:district/region :region/sw, :district/name "Delridge"}
+{:community/category ["events calendar"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "North Delridge Neighborhood Council", :community/url "http://ndnc.org/" :neighborhood/name "Delridge"}
+{:district/region :region/ne, :district/name "North"}
+{:community/category ["chamber of commerce"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Northgate Chamber of Commerce", :community/url "http://www.northgatechamber.com/" :neighborhood/name "Northgate"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["district council"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Northwest District Council", :community/url "http://www.nwdistrictcouncil.org/" :neighborhood/name "Northwest"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["neighborhood association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Official Website of the High Point Neighborhood", :community/url "http://www.highpointneighborhood.org/" :neighborhood/name "High Point"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["neighborhood association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Othello Neighborhood Association", :community/url "http://othello.talkspot.com/" :neighborhood/name "Othello"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["association news and events"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Phinney Neighborhood Association", :community/url "http://phinneycenter.blogspot.com/" :neighborhood/name "Phinney Ridge"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["neighborhood association"], :community/orgtype :community.orgtype/community, :community/type :community.type/facebook-page, :community/name "Phinney Neighborhood Association", :community/url "http://www.facebook.com/group.php?gid=42314991794" :neighborhood/name "Phinney Ridge"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["neighborhood association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Phinney Neighborhood Association", :community/url "http://www.phinneycenter.org/" :neighborhood/name "Phinney Ridge"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["news" "events" "food" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "PhinneyWood", :community/url "http://www.phinneywood.com/" :neighborhood/name "Phinney Ridge"}
+{:district/region :region/ne, :district/name "North"}
+{:community/category ["news" "events" "issues"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Pinehurst Seattle", :community/url "http://pinehurstseattle.org" :neighborhood/name "Pinehurst"}
+{:district/region :region/ne, :district/name "North"}
+{:community/category ["news" "events" "issues"], :community/orgtype :community.orgtype/community, :community/type :community.type/twitter, :community/name "Pinehurst Seattle", :community/url "http://twitter.com/pinehurstsea" :neighborhood/name "Pinehurst"}
+{:district/region :region/ne, :district/name "North"}
+{:community/category ["news" "events" "issues"], :community/orgtype :community.orgtype/community, :community/type :community.type/facebook-page, :community/name "Pinehurst Seattle", :community/url "http://www.facebook.com/#!/group.php?gid=53590206898&v=wall&ref=search" :neighborhood/name "Pinehurst"}
+{:district/region :region/w, :district/name "Downtown"}
+{:community/category ["community organization"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Pioneer Square Community Association", :community/url "http://www.pioneersquare.org/" :neighborhood/name "Pioneer Square"}
+{:district/region :region/w, :district/name "Magnolia/Queen Anne"}
+{:community/category ["chamber of commerce"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Queen Anne Chamber of Commerce", :community/url "http://qachamber.org/" :neighborhood/name "Queen Anne"}
+{:district/region :region/w, :district/name "Magnolia/Queen Anne"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Queen Anne Community Council", :community/url "http://www.qacc.net/" :neighborhood/name "Queen Anne"}
+{:district/region :region/w, :district/name "Magnolia/Queen Anne"}
+{:community/category ["news" "local issues"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Queen Anne Examiner", :community/url "http://www.examiner.com/x-8856-Seattle-Queen-Anne-Hill-Examiner" :neighborhood/name "Queen Anne"}
+{:district/region :region/w, :district/name "Magnolia/Queen Anne"}
+{:community/category ["nonprofit"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Queen Anne Helpline", :community/url "http://queenannehelpline.org/index.php" :neighborhood/name "Queen Anne"}
+{:district/region :region/w, :district/name "Magnolia/Queen Anne"}
+{:community/category ["historical society"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Queen Anne Historical Society", :community/url "http://www.qahistory.org/" :neighborhood/name "Queen Anne"}
+{:district/region :region/w, :district/name "Magnolia/Queen Anne"}
+{:community/category ["news" "events" "reviews"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Queen Anne View", :community/url "http://www.queenanneview.com/" :neighborhood/name "Queen Anne"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["news" "events" "issues"], :community/orgtype :community.orgtype/community, :community/type :community.type/twitter, :community/name "Rainier Beach Community Empowerment Coalition", :community/url "http://twitter.com/rainierbeach" :neighborhood/name "Rainier Beach"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["news" "events" "issues"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Rainier Beach Community Empowerment Coalition", :community/url "http://www.rbcoalition.org/" :neighborhood/name "Rainier Beach"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["historical society"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Rainier Valley Historical Society", :community/url "http://www.rainiervalleyhistory.org/" :neighborhood/name "Rainier Valley"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["news" "events" "911 blotter" "food" "reviews"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Rainier Valley Post", :community/url "http://www.rainiervalleypost.com/" :neighborhood/name "Rainier Valley"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["news" "events" "human interest" "criminal activity" "food" "shopping"], :community/orgtype :community.orgtype/community, :community/type :community.type/twitter, :community/name "Ravenna Blog", :community/url "http://twitter.com/ravennablog" :neighborhood/name "Ravenna"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["news" "events" "human interest" "criminal activity" "food" "shopping"], :community/orgtype :community.orgtype/community, :community/type :community.type/facebook-page, :community/name "Ravenna Blog", :community/url "http://www.facebook.com/pages/Ravenna-Blog/116280421718247" :neighborhood/name "Ravenna"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["news" "events" "human interest" "criminal activity" "food" "shopping"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Ravenna Blog", :community/url "http://www.ravennablog.com/" :neighborhood/name "Ravenna"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["community association"], :community/orgtype :community.orgtype/community, :community/type :community.type/facebook-page, :community/name "Ravenna-Bryant Community Association", :community/url "http://www.facebook.com/pages/Ravenna-Bryant-Community-Association/153638664651035" :neighborhood/name "Ravenna"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["community association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Ravenna-Bryant Community Association", :community/url "http://www.ravennabryant.org/" :neighborhood/name "Ravenna"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["neighborhood association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Roosevelt Neighborhood Association", :community/url "http://rooseveltseattle.org/default.aspx" :neighborhood/name "Roosevelt"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["neighborhood association"], :community/orgtype :community.orgtype/community, :community/type :community.type/facebook-page, :community/name "Roosevelt Neighborhood Association", :community/url "http://www.facebook.com/group.php?gid=178766520060" :neighborhood/name "Roosevelt"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["neighborhood association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Roosevelt Neighbors' Alliance", :community/url "http://www.rooseveltneighborsalliance.org/main/Roosevelt_Neighbors_Alliance.html" :neighborhood/name "Roosevelt"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["news" "events"], :community/orgtype :community.orgtype/community, :community/type :community.type/twitter, :community/name "Roosevelt Seattle", :community/url "http://twitter.com/roosieseattle" :neighborhood/name "Roosevelt"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["news" "events" "human interest" "criminal activity"], :community/orgtype :community.orgtype/community, :community/type :community.type/twitter, :community/name "Rosiehood", :community/url "http://twitter.com/Roosiehood" :neighborhood/name "Roosevelt"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["news" "events" "human interest" "criminal activity"], :community/orgtype :community.orgtype/community, :community/type :community.type/facebook-page, :community/name "Rosiehood", :community/url "http://www.facebook.com/pages/Roosevelt-Neighborhood-Blog/133948283288085" :neighborhood/name "Roosevelt"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["news" "events" "human interest" "criminal activity"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Rosiehood", :community/url "http://www.roosiehood.com/" :neighborhood/name "Roosevelt"}
+{:district/region :region/w, :district/name "Lake Union"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "S Lake Union Friends and Neighbors Community Council", :community/url "http://www.slufan.org/" :neighborhood/name "South Lake Union"}
+{:district/region :region/w, :district/name "Downtown"}
+{:community/category ["public development authority"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "SCIPDA", :community/url "http://www.scidpda.org/" :neighborhood/name "International District"}
+{:district/region :region/e, :district/name "East"}
+{:community/category ["college"], :community/type :community.type/website, :community/name "Seattle Central Community College", :community/url "http://seattlecentral.edu/" :neighborhood/name "Capitol Hill"}
+{:district/region :region/w, :district/name "Downtown"}
+{:community/category ["food" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/website, :community/name "Seattle Chinatown Guide", :community/url "http://www.chinatownconnection.com/seattle-chinatown-international-district.htm" :neighborhood/name "International District"}
+{:district/region :region/s, :district/name "Greater Duwamish"}
+{:community/category ["seattle industry"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Seattle Industry", :community/url "http://www.seattleindustry.org/" :neighborhood/name "Industrial District"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["shared community group website"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Seattle's Othello Neighborhood", :community/url "http://othelloneighborhood.org/default.aspx" :neighborhood/name "Othello"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["senior center"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Senior Center West Seattle", :community/url "http://www.sc-ws.org/" :neighborhood/name "West Seattle"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["senior sevices"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Senior Services", :community/url "http://www.seniorservices.org/" :neighborhood/name "West Seattle"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["news" "weather" "events" "criminal activity"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Shilshole Blog", :community/url "http://shilsholecommunity.org/" :neighborhood/name "Ballard"}
+{:district/region :region/s, :district/name "Downtown"}
+{:community/category ["business association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "SoDo Business Association", :community/url "http://www.sodobusinessassociation.org/" :neighborhood/name "SoDo"}
+{:district/region :region/s, :district/name "Greater Duwamish"}
+{:community/category ["business association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "SoDo Business Association", :community/url "http://www.sodobusinessassociation.org/" :neighborhood/name "Industrial District"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["nonprofit"], :community/orgtype :community.orgtype/community, :community/type :community.type/facebook-page, :community/name "Solid Ground", :community/url "http://www.facebook.com/pages/Solid-Ground/20665239656" :neighborhood/name "Wallingford"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["nonprofit"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Solid Ground", :community/url "http://www.solid-ground.org/Pages/Default.aspx" :neighborhood/name "Wallingford"}
+{:district/region :region/w, :district/name "Lake Union"}
+{:community/category ["chamber of commerce"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "South Lake Union Chamber of Commerce", :community/url "http://www.sluchamber.org/" :neighborhood/name "South Lake Union"}
+{:district/region :region/s, :district/name "Greater Duwamish"}
+{:community/category ["neighborhood info"], :community/orgtype :community.orgtype/community, :community/type :community.type/myspace, :community/name "South Park Seattle", :community/url "http://www.myspace.com/southparkseattle" :neighborhood/name "South Park"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["district council"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Southeast District Council", :community/url "http://sedcseattle.wordpress.com/" :neighborhood/name "Rainier Valley"}
+{:district/region :region/e, :district/name "Central"}
+{:community/category ["community group"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "Squire Park Community Council", :community/url "http://groups.yahoo.com/group/squirepark/" :neighborhood/name "Central District"}
+{:district/region :region/e, :district/name "Central"}
+{:community/category ["community group"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Squire Park Community Council", :community/url "http://www.squireparkseattle.com/" :neighborhood/name "Central District"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["community group"], :community/orgtype :community.orgtype/community, :community/type :community.type/wiki, :community/name "Sustainable Ballard", :community/url "http://sustainableballard.org/wiki/index.php?title=Welcome_to_Sustainable_Ballard!" :neighborhood/name "Ballard"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["community group" "has mailing list"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Sustainable Crown Hill", :community/url "http://sustainablecrownhill.org/wp/" :neighborhood/name "Crown Hill"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["susainability"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Sustainable Greenwood/Phinney", :community/url "http://web.me.com/annecann1/iWeb/Site/Home.html" :neighborhood/name "Phinney Ridge"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["community group"], :community/orgtype :community.orgtype/community, :community/type :community.type/ning, :community/name "Sustainable Northeast Seattle", :community/url "http://sustainableneseattle.ning.com/" :neighborhood/name "Wedgwood"}
+{:district/region :region/w, :district/name "Southwest"}
+{:community/category ["neighborhood association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "The Junction: Downtown West Seattle", :community/url "http://www.wsjunction.com/" :neighborhood/name "Junction"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["news" "events"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "The Laurelhurst Blog", :community/url "http://thelaurelhurstblog.blogspot.com/" :neighborhood/name "Laurelhurst"}
+{:district/region :region/n, :district/name "North"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/twitter, :community/name "The Maple Leafer", :community/url "http://twitter.com/themapleleafer" :neighborhood/name "Maple Leaf"}
+{:district/region :region/n, :district/name "North"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/facebook-page, :community/name "The Maple Leafer", :community/url "http://www.facebook.com/pages/The-Maple-Leafer/110782042284727" :neighborhood/name "Maple Leaf"}
+{:district/region :region/n, :district/name "North"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "The Maple Leafer", :community/url "http://www.themapleleafer.com/" :neighborhood/name "Maple Leaf"}
+{:district/region :region/w, :district/name "Lake Union"}
+{:community/category ["news" "events" "personalized profile pages"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "The South Lake Union Community Blog", :community/url "http://www.thesouthlake.com/" :neighborhood/name "South Lake Union"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["community group"], :community/type :community.type/website, :community/name "Thornton Creek Alliance", :community/url "http://www.scn.org/tca/" :neighborhood/name "Thornton Creek"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "U District Daily", :community/url "http://www.udistrictdaily.com/" :neighborhood/name "University District"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["business association"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "University District Business Improvement Area", :community/url "http://www.udistrictchamber.org/UDBIA/index.html" :neighborhood/name "University District"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["food bank"], :community/orgtype :community.orgtype/community, :community/type :community.type/facebook-page, :community/name "University District Food Bank", :community/url "http://www.facebook.com/pages/Seattle-WA/University-District-Food-Bank/47523824407" :neighborhood/name "University District"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["food bank"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "University District Food Bank", :community/url "http://www.udistrictfoodbank.org/" :neighborhood/name "University District"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["chamber of commerce"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "University District Seattle", :community/url "http://www.udistrictchamber.org/GUCC/GUCC.html" :neighborhood/name "University District"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["nonprofit"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "University District Service Fund", :community/url "http://www.udistrictchamber.org/udistrictservicefund/index.html" :neighborhood/name "University District"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["park issues" "events" "neighborhood-issues" "neighborhood-planning"], :community/orgtype :community.orgtype/community, :community/type :community.type/facebook-page, :community/name "Vision Greenwood Park Seattle", :community/url "http://www.facebook.com/pages/Vision-Greenwood-Park-Seattle/165995713450762" :neighborhood/name "Greenwood"}
+{:district/region :region/nw, :district/name "Ballard"}
+{:community/category ["neighborhood group"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Walkable Crown Hill", :community/url "http://walkablecrownhill.org/" :neighborhood/name "Crown Hill"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["chamber of commerce"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Wallingford Chamber of Commerce", :community/url "http://wallingfordchamber.org/" :neighborhood/name "Wallingford"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Wallingford Community Council", :community/url "http://wallingford.org/get-involved/community-council/" :neighborhood/name "Wallingford"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["news" "events" "advice"], :community/orgtype :community.orgtype/community, :community/type :community.type/twitter, :community/name "Wallingford Seattle Blog", :community/url "http://twitter.com/wallingford" :neighborhood/name "Wallingford"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["news" "events" "advice"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "Wallingford Seattle Blog", :community/url "http://wallingfordseattle.tumblr.com/" :neighborhood/name "Wallingford"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["neighborhood group"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Wallingford.org", :community/url "http://www.wallingford.org/" :neighborhood/name "Wallingford"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["news" "events"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/twitter, :community/name "Wallyhood - Wallingford Seattle Blog", :community/url "http://twitter.com/wallyhood" :neighborhood/name "Wallingford"}
+{:district/region :region/nw, :district/name "Northwest"}
+{:community/category ["news" "events"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Wallyhood - Wallingford Seattle Blog", :community/url "http://www.wallyhood.org/" :neighborhood/name "Wallingford"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["block watch"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Wedgwood Block Watch", :community/url "http://www.wedgwoodcc.org/wwbw/" :neighborhood/name "Wedgwood"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Wedgwood Community Council", :community/url "http://www.wedgwoodcc.org/" :neighborhood/name "Wedgwood"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["community council"], :community/orgtype :community.orgtype/community, :community/type :community.type/facebook-page, :community/name "Wedgwood Community Council", :community/url "http://www.facebook.com/pages/Wedgwood-Community-Council/146730522040662" :neighborhood/name "Wedgwood"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/twitter, :community/name "Wedgwood View", :community/url "http://twitter.com/wedgwoodview" :neighborhood/name "Wedgwood"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/facebook-page, :community/name "Wedgwood View", :community/url "http://www.facebook.com/pages/Wedgwood-View/331236446338" :neighborhood/name "Wedgwood"}
+{:district/region :region/ne, :district/name "Northeast"}
+{:community/category ["news" "events" "human interest" "criminal activity" "shopping"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/blog, :community/name "Wedgwood View", :community/url "http://www.wedgwoodview.com/" :neighborhood/name "Wedgwood"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["profile page for West Seattle Blog"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/facebook-page, :community/name "West Seattle Blog", :community/url "http://www.facebook.com/westseattleblog" :neighborhood/name "West Seattle"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["chamber of commerce"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "West Seattle Chamber of Commerce", :community/url "http://www.wschamber.com/" :neighborhood/name "West Seattle"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["online newspaper"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/twitter, :community/name "West Seattle Herald", :community/url "http://twitter.com/westseattleher" :neighborhood/name "West Seattle"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["online newspaper"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/facebook-page, :community/name "West Seattle Herald", :community/url "http://www.facebook.com/wsherald" :neighborhood/name "West Seattle"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["online newspaper"], :community/orgtype :community.orgtype/commercial, :community/type :community.type/website, :community/name "West Seattle Herald", :community/url "http://www.westseattleherald.com/" :neighborhood/name "West Seattle"}
+{:district/region :region/sw, :district/name "Delridge"}
+{:community/category ["neighborhood council"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Westwood Neighborhood Council", :community/url "http://www.scn.org/neighbors/westwood/" :neighborhood/name "Westwood"}
+{:district/region :region/sw, :district/name "Delridge"}
+{:community/category ["nonprofit"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "White Center Community Development Association", :community/url "http://www.wccda.org/home" :neighborhood/name "White Center"}
+{:district/region :region/sw, :district/name "Delridge"}
+{:community/category ["nonprofit"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "White Center Community Development Association blog", :community/url "http://twitter.com/whitecentercda" :neighborhood/name "White Center"}
+{:district/region :region/sw, :district/name "Delridge"}
+{:community/category ["news" "events" "food"], :community/orgtype :community.orgtype/community, :community/type :community.type/blog, :community/name "White Center Now", :community/url "http://whitecenternow.com/" :neighborhood/name "White Center"}
+{:district/region :region/sw, :district/name "Southwest"}
+{:community/category ["tech resources"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "White Center Technology Programs", :community/url "http://technology.program.googlepages.com/" :neighborhood/name "White Center"}
+{:district/region :region/w, :district/name "Downtown"}
+{:community/category ["museum"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Wing Luke Asian Museum", :community/url "http://www.wingluke.org/" :neighborhood/name "International District"}
+{:district/region :region/sw, :district/name "Delridge"}
+{:community/category ["arts"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Youngstown Cultural Arts Center", :community/url "http://youngstownarts.org" :neighborhood/name "Delridge"}
+{:district/region :region/e, :district/name "East"}
+{:community/category ["dining" "events" "nightlife" "shopping"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Your Capitol Hill", :community/url "http://www.yourcapitolhill.com/" :neighborhood/name "Capitol Hill"}
+{:district/region :region/s, :district/name "Greater Duwamish"}
+{:community/category ["community members"], :community/orgtype :community.orgtype/community, :community/type :community.type/email-list, :community/name "yoursouthpark", :community/url "http://groups.yahoo.com/group/yoursouthpark/" :neighborhood/name "South Park"}
+{:district/region :region/w, :district/name "Downtown"}
+{:community/category ["ethnic/cultural-interest" "seniors" "youth"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Helping Link", :community/url "http://www.helpinglink.org/" :neighborhood/name "International District"}
+{:district/region :region/e, :district/name "East"}
+{:community/category ["community group"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "MLK FAME Community Center", :community/url "http://www.mlkfame.com/" :neighborhood/name "Madison Park"}
+{:district/region :region/se, :district/name "Southeast"}
+{:community/category ["neighborhood-issues" "neighborhood-planning"], :community/orgtype :community.orgtype/community, :community/type :community.type/website, :community/name "Jackson Place Community Council", :community/url "http://www.jacksonplace.org" :neighborhood/name "Jackson Place"}
