@@ -2,6 +2,9 @@
 
 * This experiment will use the sample database that comes with the Postgres system called the DVD rental. This is available as a dump that can be downloaded and imported into a postgres instance. We wil use this database and realize it on Datomic. We can then run tests to compare Postgres vs Datomic. 
 
+* Here is the ER diagram of the original database inside Postgres.
+<img src="./images/dvd-rental-sample-database-diagram.png" />
+
 * We can start the docker engine. Once the docker engine is up and running, we can start the postgres database. 
 
 <pre>
@@ -70,4 +73,7 @@ cd C:\Venky\datomic-experiment\datomicexperiments\DatomicExperiments
 mvn clean package
 
 mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.ActorsLoad"
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.AddressLoad"
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.CategoriesLoad"
+
 </pre>
