@@ -1,0 +1,17 @@
+{ :db/ident :inventory/inventory_id
+  :db/unique :db.unique/identity
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "The inventory ID"}
+{ :db/ident :inventory/film_id
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The inventory's first name"}
+{ :db/ident :inventory/store_id
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The inventory's first name"}
+{ :db/ident :inventory/last_update
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db/doc "Last update ts"}  

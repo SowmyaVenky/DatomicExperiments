@@ -1,0 +1,29 @@
+{ :db/ident :rental/rental_id
+  :db/unique :db.unique/identity
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "The rental ID"}
+{ :db/ident :rental/rental_date
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db/doc "The rental date"}
+{ :db/ident :rental/inventory_id
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The rental inventory id"}
+{ :db/ident :rental/customer_id
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The rental customer id"}
+{ :db/ident :rental/return_date
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db/doc "The rental return date"}
+{ :db/ident :rental/staff_id
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The rental staff id"}  
+{ :db/ident :rental/last_update
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db/doc "Last update ts"}  

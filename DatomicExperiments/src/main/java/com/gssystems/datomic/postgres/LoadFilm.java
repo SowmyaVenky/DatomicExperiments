@@ -188,8 +188,10 @@ public class LoadFilm {
         System.out.println("Printing out film count...");
         q = "[:find (count ?aid) . :where [?aid :film/film_id ]]";
         getResults(db, q);
-
-        System.exit(0);
+        if (args != null && args.length == 1 && args[0].equalsIgnoreCase("true")) {
+            //Stand-alone run, can kill session to allow maven to terminate.
+            System.exit(0);
+        }     
     }
 
     private static void getResults(Database db, String q) {
