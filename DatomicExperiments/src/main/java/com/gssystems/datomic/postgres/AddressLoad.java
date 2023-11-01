@@ -95,7 +95,7 @@ public class AddressLoad {
 
             Object aTxn = datomic.Util.read(b.toString());
             Map<?, ?> resultsFromData = conn.transact(datomic.Util.list(aTxn)).get();
-            System.out.println(resultsFromData);
+            //System.out.println(resultsFromData);
         }
 
         // Get the database, to get a fresh copy.
@@ -111,7 +111,9 @@ public class AddressLoad {
         q = "[:find (count ?aid) . :where [?aid :address/address_id ]]";
         getResults(db, q);
 
-        System.exit(0);
+        //Address loads are called by other program for in-mem testing, 
+        //Need to uncomment it later on when we test against docker.
+        //System.exit(0);
     }
 
     private static void getResults(Database db, String q) {

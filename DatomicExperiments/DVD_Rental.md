@@ -75,5 +75,6 @@ mvn clean package
 mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.ActorsLoad"
 mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.AddressLoad"
 mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.CategoriesLoad"
-
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadStore"
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadStaff"
 </pre>

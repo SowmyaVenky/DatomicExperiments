@@ -1,0 +1,17 @@
+{ :db/ident :store/store_id
+  :db/unique :db.unique/identity
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "The store ID"}
+{ :db/ident :store/manager_staff_id
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "The manager id"}
+{ :db/ident :store/address_id
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The address id"}
+{ :db/ident :store/last_update
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db/doc "Last update ts"}  
