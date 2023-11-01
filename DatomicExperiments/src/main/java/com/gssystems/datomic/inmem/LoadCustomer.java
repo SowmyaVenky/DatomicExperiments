@@ -1,4 +1,4 @@
-package com.gssystems.datomic.postgres;
+package com.gssystems.datomic.inmem;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;

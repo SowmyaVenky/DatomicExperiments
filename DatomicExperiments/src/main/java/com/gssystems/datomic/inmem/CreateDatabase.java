@@ -1,4 +1,4 @@
-package com.gssystems.datomic.postgres;
+package com.gssystems.datomic.inmem;
 
 import datomic.Peer;
 

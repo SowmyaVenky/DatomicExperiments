@@ -72,18 +72,27 @@ dvdrental=# \dt
 cd C:\Venky\datomic-experiment\datomicexperiments\DatomicExperiments
 mvn clean package
 
-mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.ActorsLoad" -Dexec.args="true"
-mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.AddressLoad" -Dexec.args="true"
-mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.CategoriesLoad"  -Dexec.args="true" 
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.inmem.ActorsLoad" -Dexec.args="true"
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.inmem.AddressLoad" -Dexec.args="true"
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.inmem.CategoriesLoad"  -Dexec.args="true" 
 
 ## Don't pass true, otherwise it will terminate after the first dependent load...
 ## These programs will load more than one dependent entity and then load the main ## one.
 
-mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadStore"
-mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadStaff"
-mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadCustomer"
-mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadFilm"
-mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadInventory"
-mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadRental"
-mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadPayment"
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.inmem.LoadStore"
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.inmem.LoadStaff"
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.inmem.LoadCustomer"
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.inmem.LoadFilm"
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.inmem.LoadInventory"
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.inmem.LoadRental"
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.inmem.LoadPayment"
+</pre>
+
+* Now we will start the datomic-free container as detailed in the docker readme. Once the docker container starts, we can point to that and create our database. Since we were doing all the stuff with in-memory we needed to do a composite data load as needed to load required entities before loading the main entity. Now, we do not need all that since it will keep state. 
+
+<pre>
+cd C:\Venky\datomic-experiment\datomicexperiments\DatomicExperiments
+mvn clean package
+
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.docker.CreateDatbase"
 </pre>

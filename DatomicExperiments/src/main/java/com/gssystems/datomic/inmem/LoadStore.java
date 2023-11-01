@@ -1,4 +1,4 @@
-package com.gssystems.datomic.postgres;
+package com.gssystems.datomic.inmem;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -15,7 +15,7 @@ import datomic.Connection;
 import datomic.Database;
 import datomic.Peer;
 
-public class CategoriesLoad {
+public class LoadStore {
     private static final  int MAX_RECORDS_TO_SHOW = 10;
     public static void main(String[] args) throws Exception {
 
@@ -32,16 +32,19 @@ public class CategoriesLoad {
             e.printStackTrace();
         }
 
-        String uri = "datomic:mem://dvdrental";
 
-        System.out.println("Creating a new database called dvdrental...");
-        Peer.createDatabase(uri);
+        String uri = "datomic:mem://dvdrental";
+        //Create database passing true. 
+        CreateDatabase.main(new String[] {"true"});
+
+        //Call address loads! Passing null as args will bypass create database.
+        AddressLoad.main(args);
 
         Connection conn = Peer.connect(uri);
         System.out.println("Applying the schema to the database we created...");
 
         InputStream in = SeattleDataExample.class.getClassLoader()
-                .getResourceAsStream("dvdrental/category.edn");
+                .getResourceAsStream("dvdrental/store.edn");
 
         InputStreamReader isr = new InputStreamReader(in);
         List<?> schemaList = datomic.Util.readAll(isr);
@@ -53,32 +56,37 @@ public class CategoriesLoad {
         System.out.println("After schema create transaction answer is : " + resultsFromSchema);
 
         java.sql.Statement st = pgConn.createStatement();
-        java.sql.ResultSet rs = st.executeQuery("SELECT * FROM CATEGORY");
+        java.sql.ResultSet rs = st.executeQuery("SELECT * FROM STORE");
 
         SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
         SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm:ss");
 
         while (rs.next()) {
-            long category_id = rs.getLong("category_id");
-            String cat_name = rs.getString("name");
+            long store_id = rs.getLong("store_id");
+            long manager_staff_id = rs.getLong("manager_staff_id");
+            long address_id = rs.getLong("address_id");
+
             java.sql.Timestamp last_update = rs.getTimestamp("last_update");
 
-            System.out.println("Inserting row into Datomic :" + category_id);
+            System.out.println("Inserting row into Datomic :" + store_id);
             StringBuffer b = new StringBuffer();
             b.append("{");
-            b.append(" :category/category_id " + category_id);
-            b.append(" :category/name \"" + cat_name + "\"");
+            b.append(" :store/store_id " + store_id);
+            b.append(" :store/manager_staff_id " + manager_staff_id);
+
+            //Reference to the address object...
+            b.append(" :store/address_id [:address/address_id " + address_id + "]");
 
             // Note the usage of #inst to convert into the datetime needed.
-            b.append(" :category/last_update " + "#inst " + "\"" + sdf1.format(last_update) + "T"
+            b.append(" :store/last_update " + "#inst " + "\"" + sdf1.format(last_update) + "T"
                     + sdf2.format(last_update) + "\"");
             b.append("}");
 
-            // System.out.println( b.toString());
+            //System.out.println( b.toString());
 
             Object aTxn = datomic.Util.read(b.toString());
             Map<?, ?> resultsFromData = conn.transact(datomic.Util.list(aTxn)).get();
-            System.out.println(resultsFromData);
+            //System.out.println(resultsFromData);
         }
 
         rs.close();
@@ -88,14 +96,15 @@ public class CategoriesLoad {
         Database db = conn.db();
         System.out.println("Peer connected to the datbase : " + db);
 
-        System.out.println("Printing out names of categories...");
-        String q = "[:find ?cid ?cname ?lupd :where [?e :category/category_id ?cid][?e :category/name ?cname][?e :category/last_update ?lupd] ]";
+        System.out.println("Printing out stores...");
+        String q = "[:find ?sid ?mgrid ?lupd ?addrid :where [?e :store/store_id ?sid][?e :store/manager_staff_id ?mgrid][?e :store/last_update ?lupd][?e :store/address_id ?addrid] ]";
 
         getResults(db, q);
 
-        System.out.println("Printing out category count...");
-        q = "[:find (count ?aid) . :where [?aid :category/category_id ]]";
+        System.out.println("Printing out store count...");
+        q = "[:find (count ?aid) . :where [?aid :store/store_id ]]";
         getResults(db, q);
+
         if (args != null && args.length == 1 && args[0].equalsIgnoreCase("true")) {
             //Stand-alone run, can kill session to allow maven to terminate.
             System.exit(0);

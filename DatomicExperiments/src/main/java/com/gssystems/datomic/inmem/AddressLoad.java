@@ -1,4 +1,4 @@
-package com.gssystems.datomic.postgres;
+package com.gssystems.datomic.inmem;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -15,10 +15,15 @@ import datomic.Connection;
 import datomic.Database;
 import datomic.Peer;
 
-public class LoadInventory {
+public class AddressLoad {
     private static final  int MAX_RECORDS_TO_SHOW = 10;
-    public static void main(String[] args) throws Exception {
+    private static final String QUERY = "select address_id, address, address2, district, city, country, postal_code, phone, address.last_update from " 
+    + " address left outer join city on address.city_id = city.city_id "
+    + " left outer join country on city.country_id = country.country_id ";
 
+    public static void main(String[] args) throws Exception {
+        System.out.println("Executing query: " + QUERY);
+        
         // Connect to JDBC and pull from Postgres
         String url = "jdbc:postgresql://localhost:5432/dvdrental";
         String user = "postgres";
@@ -33,18 +38,13 @@ public class LoadInventory {
         }
 
         String uri = "datomic:mem://dvdrental";
-
         CreateDatabase.main(args);
-        
-        //Load films - pass null to not recreate the db
-        LoadFilm.main(null);
-        LoadStore.main(null);
 
         Connection conn = Peer.connect(uri);
         System.out.println("Applying the schema to the database we created...");
 
         InputStream in = SeattleDataExample.class.getClassLoader()
-                .getResourceAsStream("dvdrental/inventory.edn");
+                .getResourceAsStream("dvdrental/address.edn");
 
         InputStreamReader isr = new InputStreamReader(in);
         List<?> schemaList = datomic.Util.readAll(isr);
@@ -56,26 +56,36 @@ public class LoadInventory {
         System.out.println("After schema create transaction answer is : " + resultsFromSchema);
 
         java.sql.Statement st = pgConn.createStatement();
-        java.sql.ResultSet rs = st.executeQuery("SELECT * FROM INVENTORY");
+        java.sql.ResultSet rs = st.executeQuery(QUERY);
 
         SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
         SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm:ss");
 
         while (rs.next()) {
-            long inventory_id = rs.getLong("inventory_id");
-            long film_id = rs.getLong("film_id");
-            long store_id = rs.getLong("store_id");
+            long address_id = rs.getLong("address_id");
+            String address = rs.getString("address");
+            String address2 = rs.getString("address2");
+            String district = rs.getString("district");
+            String city = rs.getString("city");
+            String country = rs.getString("country");
+            String postal_code = rs.getString("postal_code");
+            String phone = rs.getString("phone");
             java.sql.Timestamp last_update = rs.getTimestamp("last_update");
 
-            System.out.println("Inserting row into Datomic :" + inventory_id);
+            System.out.println("Inserting address row into Datomic :" + address_id);
             StringBuffer b = new StringBuffer();
             b.append("{");
-            b.append(" :inventory/inventory_id " + inventory_id);
-            b.append(" :inventory/film_id [:film/film_id " + film_id + "]");
-            b.append(" :inventory/store_id [:store/store_id " + store_id + "]");
+            b.append(" :address/address_id " + address_id);
+            b.append(" :address/address \"" + address + "\"");
+            b.append(" :address/address2 \"" + address2 + "\"");
+            b.append(" :address/district \"" + district + "\"");
+            b.append(" :address/city \"" + city + "\"");
+            b.append(" :address/country \"" + country + "\"");
+            b.append(" :address/postal_code \"" + postal_code + "\"");
+            b.append(" :address/phone \"" + phone + "\"");
 
             // Note the usage of #inst to convert into the datetime needed.
-            b.append(" :inventory/last_update " + "#inst " + "\"" + sdf1.format(last_update) + "T"
+            b.append(" :actor/last_update " + "#inst " + "\"" + sdf1.format(last_update) + "T"
                     + sdf2.format(last_update) + "\"");
             b.append("}");
 
@@ -93,23 +103,19 @@ public class LoadInventory {
         Database db = conn.db();
         System.out.println("Peer connected to the datbase : " + db);
 
-        System.out.println("Printing inventory...");
-        String q = "[:find ?invid ?fid ?sid ?lupd :where " + 
-        "[?e :inventory/inventory_id ?invid]" + 
-        "[?e :inventory/film_id ?fid]" + 
-        "[?e :inventory/store_id ?sid]" + 
-        "[?e :inventory/last_update ?lupd] ]";
+        System.out.println("Printing out names of addresses...");
+        String q = "[:find ?aid ?address ?city ?cntry :where [?e :address/address_id ?aid][?e :address/address ?address][?e :address/city ?city][?e :address/country ?cntry] ]";
 
         getResults(db, q);
 
-        System.out.println("Printing out inventory count...");
-        q = "[:find (count ?aid) . :where [?aid :inventory/inventory_id ]]";
+        System.out.println("Printing out addresses count...");
+        q = "[:find (count ?aid) . :where [?aid :address/address_id ]]";
         getResults(db, q);
 
         if (args != null && args.length == 1 && args[0].equalsIgnoreCase("true")) {
             //Stand-alone run, can kill session to allow maven to terminate.
             System.exit(0);
-        }         
+        }
     }
 
     private static void getResults(Database db, String q) {
@@ -131,5 +137,5 @@ public class LoadInventory {
         } else if( res instanceof Integer) {
             System.out.println( "Result is : " + res );
         }
-    }    
+    }
 }

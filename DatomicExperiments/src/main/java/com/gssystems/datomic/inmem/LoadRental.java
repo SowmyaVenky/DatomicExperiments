@@ -1,4 +1,4 @@
-package com.gssystems.datomic.postgres;
+package com.gssystems.datomic.inmem;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -15,7 +15,7 @@ import datomic.Connection;
 import datomic.Database;
 import datomic.Peer;
 
-public class LoadStore {
+public class LoadRental {
     private static final  int MAX_RECORDS_TO_SHOW = 10;
     public static void main(String[] args) throws Exception {
 
@@ -32,19 +32,20 @@ public class LoadStore {
             e.printStackTrace();
         }
 
-
         String uri = "datomic:mem://dvdrental";
-        //Create database passing true. 
-        CreateDatabase.main(new String[] {"true"});
 
-        //Call address loads! Passing null as args will bypass create database.
-        AddressLoad.main(args);
+        CreateDatabase.main(args);
+        
+        //Load films - pass null to not recreate the db
+        LoadCustomer.main(null);
+        LoadInventory.main(null);
+        LoadStaff.main(null);
 
         Connection conn = Peer.connect(uri);
         System.out.println("Applying the schema to the database we created...");
 
         InputStream in = SeattleDataExample.class.getClassLoader()
-                .getResourceAsStream("dvdrental/store.edn");
+                .getResourceAsStream("dvdrental/rental.edn");
 
         InputStreamReader isr = new InputStreamReader(in);
         List<?> schemaList = datomic.Util.readAll(isr);
@@ -56,33 +57,40 @@ public class LoadStore {
         System.out.println("After schema create transaction answer is : " + resultsFromSchema);
 
         java.sql.Statement st = pgConn.createStatement();
-        java.sql.ResultSet rs = st.executeQuery("SELECT * FROM STORE");
+        java.sql.ResultSet rs = st.executeQuery("SELECT * FROM RENTAL");
 
         SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
         SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm:ss");
 
         while (rs.next()) {
-            long store_id = rs.getLong("store_id");
-            long manager_staff_id = rs.getLong("manager_staff_id");
-            long address_id = rs.getLong("address_id");
-
+            long rental_id = rs.getLong("rental_id");
+            java.sql.Timestamp rental_date = rs.getTimestamp("rental_date");
+            long inventory_id = rs.getLong("inventory_id");
+            long customer_id = rs.getLong("customer_id");
+            java.sql.Timestamp return_date = rs.getTimestamp("return_date");
+            long staff_id = rs.getLong("staff_id");
             java.sql.Timestamp last_update = rs.getTimestamp("last_update");
 
-            System.out.println("Inserting row into Datomic :" + store_id);
+            System.out.println("Inserting row into Datomic :" + rental_id);
             StringBuffer b = new StringBuffer();
             b.append("{");
-            b.append(" :store/store_id " + store_id);
-            b.append(" :store/manager_staff_id " + manager_staff_id);
+            b.append(" :rental/rental_id " + rental_id);
+            b.append(" :rental/rental_date " + "#inst " + "\"" + sdf1.format(rental_date) + "T"
+                    + sdf2.format(rental_date) + "\"");
+            b.append(" :rental/inventory_id [:inventory/inventory_id " + inventory_id + "]");
+            b.append(" :rental/customer_id [:customer/customer_id " + customer_id + "]");
+            if( return_date != null) {
+                b.append(" :rental/return_date " + "#inst " + "\"" + sdf1.format(return_date) + "T"
+                    + sdf2.format(return_date) + "\"");
+            }
 
-            //Reference to the address object...
-            b.append(" :store/address_id [:address/address_id " + address_id + "]");
-
+            b.append(" :rental/staff_id [:staff/staff_id " + staff_id + "]");
             // Note the usage of #inst to convert into the datetime needed.
-            b.append(" :store/last_update " + "#inst " + "\"" + sdf1.format(last_update) + "T"
+            b.append(" :rental/last_update " + "#inst " + "\"" + sdf1.format(last_update) + "T"
                     + sdf2.format(last_update) + "\"");
             b.append("}");
 
-            //System.out.println( b.toString());
+            // System.out.println( b.toString());
 
             Object aTxn = datomic.Util.read(b.toString());
             Map<?, ?> resultsFromData = conn.transact(datomic.Util.list(aTxn)).get();
@@ -91,24 +99,32 @@ public class LoadStore {
 
         rs.close();
         pgConn.close();
-        
+
         // Get the database, to get a fresh copy.
         Database db = conn.db();
         System.out.println("Peer connected to the datbase : " + db);
 
-        System.out.println("Printing out stores...");
-        String q = "[:find ?sid ?mgrid ?lupd ?addrid :where [?e :store/store_id ?sid][?e :store/manager_staff_id ?mgrid][?e :store/last_update ?lupd][?e :store/address_id ?addrid] ]";
+        System.out.println("Printing rentals...");
+        String q = "[:find ?v1 ?v2 ?v3 ?v4 ?v5 ?v6 ?v7 :where " + 
+        "[?e :rental/rental_id ?v1]" + 
+        "[?e :rental/rental_date ?v2]" + 
+        "[?e :rental/inventory_id ?v3]" + 
+        "[?e :rental/customer_id ?v4] " +
+        "[?e :rental/return_date ?v5] " +
+        "[?e :rental/last_update ?v6] " +
+        "[?e :rental/staff_id ?v7] " +
+        " ]";
 
         getResults(db, q);
 
-        System.out.println("Printing out store count...");
-        q = "[:find (count ?aid) . :where [?aid :store/store_id ]]";
+        System.out.println("Printing out rentals count...");
+        q = "[:find (count ?aid) . :where [?aid :rental/rental_id ]]";
         getResults(db, q);
 
         if (args != null && args.length == 1 && args[0].equalsIgnoreCase("true")) {
             //Stand-alone run, can kill session to allow maven to terminate.
             System.exit(0);
-        }
+        }         
     }
 
     private static void getResults(Database db, String q) {
@@ -130,5 +146,5 @@ public class LoadStore {
         } else if( res instanceof Integer) {
             System.out.println( "Result is : " + res );
         }
-    }
+    }        
 }

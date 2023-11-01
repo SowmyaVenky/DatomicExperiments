@@ -1,4 +1,4 @@
-package com.gssystems.datomic.postgres;
+package com.gssystems.datomic.inmem;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -15,7 +15,7 @@ import datomic.Connection;
 import datomic.Database;
 import datomic.Peer;
 
-public class LoadRental {
+public class LoadPayment {
     private static final  int MAX_RECORDS_TO_SHOW = 10;
     public static void main(String[] args) throws Exception {
 
@@ -37,15 +37,13 @@ public class LoadRental {
         CreateDatabase.main(args);
         
         //Load films - pass null to not recreate the db
-        LoadCustomer.main(null);
-        LoadInventory.main(null);
-        LoadStaff.main(null);
+        LoadRental.main(null);
 
         Connection conn = Peer.connect(uri);
         System.out.println("Applying the schema to the database we created...");
 
         InputStream in = SeattleDataExample.class.getClassLoader()
-                .getResourceAsStream("dvdrental/rental.edn");
+                .getResourceAsStream("dvdrental/payment.edn");
 
         InputStreamReader isr = new InputStreamReader(in);
         List<?> schemaList = datomic.Util.readAll(isr);
@@ -57,37 +55,31 @@ public class LoadRental {
         System.out.println("After schema create transaction answer is : " + resultsFromSchema);
 
         java.sql.Statement st = pgConn.createStatement();
-        java.sql.ResultSet rs = st.executeQuery("SELECT * FROM RENTAL");
+        java.sql.ResultSet rs = st.executeQuery("SELECT * FROM PAYMENT");
 
         SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
         SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm:ss");
 
         while (rs.next()) {
-            long rental_id = rs.getLong("rental_id");
-            java.sql.Timestamp rental_date = rs.getTimestamp("rental_date");
-            long inventory_id = rs.getLong("inventory_id");
+            long payment_id = rs.getLong("payment_id");
             long customer_id = rs.getLong("customer_id");
-            java.sql.Timestamp return_date = rs.getTimestamp("return_date");
             long staff_id = rs.getLong("staff_id");
-            java.sql.Timestamp last_update = rs.getTimestamp("last_update");
+            long rental_id = rs.getLong("rental_id");
+            double amount = rs.getDouble("amount");            
+            java.sql.Timestamp payment_date = rs.getTimestamp("payment_date");
 
-            System.out.println("Inserting row into Datomic :" + rental_id);
+            System.out.println("Inserting row into Datomic :" + payment_id);
             StringBuffer b = new StringBuffer();
             b.append("{");
-            b.append(" :rental/rental_id " + rental_id);
-            b.append(" :rental/rental_date " + "#inst " + "\"" + sdf1.format(rental_date) + "T"
-                    + sdf2.format(rental_date) + "\"");
-            b.append(" :rental/inventory_id [:inventory/inventory_id " + inventory_id + "]");
-            b.append(" :rental/customer_id [:customer/customer_id " + customer_id + "]");
-            if( return_date != null) {
-                b.append(" :rental/return_date " + "#inst " + "\"" + sdf1.format(return_date) + "T"
-                    + sdf2.format(return_date) + "\"");
+            b.append(" :payment/payment_id " + payment_id);
+            b.append(" :payment/customer_id [:customer/customer_id " + customer_id + "]");
+            b.append(" :payment/staff_id [:staff/staff_id " + staff_id + "]");
+            b.append(" :payment/rental_id [:rental/rental_id " + rental_id + "]");
+            b.append(" :payment/amount " + amount);
+            if( payment_date != null) {
+                b.append(" :payment/payment_date " + "#inst " + "\"" + sdf1.format(payment_date) + "T"
+                    + sdf2.format(payment_date) + "\"");
             }
-
-            b.append(" :rental/staff_id [:staff/staff_id " + staff_id + "]");
-            // Note the usage of #inst to convert into the datetime needed.
-            b.append(" :rental/last_update " + "#inst " + "\"" + sdf1.format(last_update) + "T"
-                    + sdf2.format(last_update) + "\"");
             b.append("}");
 
             // System.out.println( b.toString());
@@ -104,21 +96,20 @@ public class LoadRental {
         Database db = conn.db();
         System.out.println("Peer connected to the datbase : " + db);
 
-        System.out.println("Printing rentals...");
-        String q = "[:find ?v1 ?v2 ?v3 ?v4 ?v5 ?v6 ?v7 :where " + 
-        "[?e :rental/rental_id ?v1]" + 
-        "[?e :rental/rental_date ?v2]" + 
-        "[?e :rental/inventory_id ?v3]" + 
-        "[?e :rental/customer_id ?v4] " +
-        "[?e :rental/return_date ?v5] " +
-        "[?e :rental/last_update ?v6] " +
-        "[?e :rental/staff_id ?v7] " +
+        System.out.println("Printing payments...");
+        String q = "[:find ?v1 ?v2 ?v3 ?v4 ?v5 ?v6 :where " + 
+        "[?e :payment/payment_id ?v1]" + 
+        "[?e :payment/customer_id ?v2]" + 
+        "[?e :payment/staff_id ?v3]" + 
+        "[?e :payment/rental_id ?v4] " +
+        "[?e :payment/amount ?v5] " +
+        "[?e :payment/payment_date ?v6] " +
         " ]";
 
         getResults(db, q);
 
-        System.out.println("Printing out rentals count...");
-        q = "[:find (count ?aid) . :where [?aid :rental/rental_id ]]";
+        System.out.println("Printing out payments count...");
+        q = "[:find (count ?aid) . :where [?aid :payment/payment_id ]]";
         getResults(db, q);
 
         if (args != null && args.length == 1 && args[0].equalsIgnoreCase("true")) {
@@ -146,5 +137,5 @@ public class LoadRental {
         } else if( res instanceof Integer) {
             System.out.println( "Result is : " + res );
         }
-    }        
+    }            
 }

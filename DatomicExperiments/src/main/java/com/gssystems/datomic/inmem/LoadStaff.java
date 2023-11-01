@@ -1,4 +1,4 @@
-package com.gssystems.datomic.postgres;
+package com.gssystems.datomic.inmem;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -15,8 +15,8 @@ import datomic.Connection;
 import datomic.Database;
 import datomic.Peer;
 
-public class LoadPayment {
-    private static final  int MAX_RECORDS_TO_SHOW = 10;
+public class LoadStaff {
+     private static final  int MAX_RECORDS_TO_SHOW = 10;
     public static void main(String[] args) throws Exception {
 
         // Connect to JDBC and pull from Postgres
@@ -32,18 +32,19 @@ public class LoadPayment {
             e.printStackTrace();
         }
 
-        String uri = "datomic:mem://dvdrental";
 
-        CreateDatabase.main(args);
-        
-        //Load films - pass null to not recreate the db
-        LoadRental.main(null);
+        String uri = "datomic:mem://dvdrental";
+        //Create database passing true. 
+        CreateDatabase.main(new String[] {"true"});
+
+        //Call store loads! Passing null as args will bypass create database.
+        LoadStore.main(null);
 
         Connection conn = Peer.connect(uri);
         System.out.println("Applying the schema to the database we created...");
 
         InputStream in = SeattleDataExample.class.getClassLoader()
-                .getResourceAsStream("dvdrental/payment.edn");
+                .getResourceAsStream("dvdrental/staff.edn");
 
         InputStreamReader isr = new InputStreamReader(in);
         List<?> schemaList = datomic.Util.readAll(isr);
@@ -55,34 +56,47 @@ public class LoadPayment {
         System.out.println("After schema create transaction answer is : " + resultsFromSchema);
 
         java.sql.Statement st = pgConn.createStatement();
-        java.sql.ResultSet rs = st.executeQuery("SELECT * FROM PAYMENT");
+        java.sql.ResultSet rs = st.executeQuery("SELECT * FROM STAFF");
 
         SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
         SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm:ss");
 
         while (rs.next()) {
-            long payment_id = rs.getLong("payment_id");
-            long customer_id = rs.getLong("customer_id");
             long staff_id = rs.getLong("staff_id");
-            long rental_id = rs.getLong("rental_id");
-            double amount = rs.getDouble("amount");            
-            java.sql.Timestamp payment_date = rs.getTimestamp("payment_date");
+            String first_name = rs.getString("first_name");
+            String last_name = rs.getString("last_name");
+            long address_id = rs.getLong("address_id");
+            String email = rs.getString("email");
+            long store_id = rs.getLong("store_id");
+            String active = rs.getString("active");
+            String username = rs.getString("username");
+            String pw = rs.getString("password");
+            //String picture = rs.getString("picture");
 
-            System.out.println("Inserting row into Datomic :" + payment_id);
+            java.sql.Timestamp last_update = rs.getTimestamp("last_update");
+
+            System.out.println("Inserting row into Datomic :" + staff_id);
             StringBuffer b = new StringBuffer();
             b.append("{");
-            b.append(" :payment/payment_id " + payment_id);
-            b.append(" :payment/customer_id [:customer/customer_id " + customer_id + "]");
-            b.append(" :payment/staff_id [:staff/staff_id " + staff_id + "]");
-            b.append(" :payment/rental_id [:rental/rental_id " + rental_id + "]");
-            b.append(" :payment/amount " + amount);
-            if( payment_date != null) {
-                b.append(" :payment/payment_date " + "#inst " + "\"" + sdf1.format(payment_date) + "T"
-                    + sdf2.format(payment_date) + "\"");
-            }
+            b.append(" :staff/staff_id " + staff_id);
+            b.append(" :staff/first_name \"" + first_name + "\"");
+            b.append(" :staff/last_name \"" + last_name + "\"");
+
+            //Reference to the address object...
+            b.append(" :staff/address_id [:address/address_id " + address_id + "]");
+
+            b.append(" :staff/email \"" + email + "\"");            
+            b.append(" :staff/store_id [:store/store_id " + store_id + "]");
+            b.append(" :staff/active \"" + active + "\"");
+            b.append(" :staff/username \"" + username + "\"");  
+            b.append(" :staff/password \"" + pw + "\"");
+
+            // Note the usage of #inst to convert into the datetime needed.
+            b.append(" :staff/last_update " + "#inst " + "\"" + sdf1.format(last_update) + "T"
+                    + sdf2.format(last_update) + "\"");
             b.append("}");
 
-            // System.out.println( b.toString());
+            //System.out.println( b.toString());
 
             Object aTxn = datomic.Util.read(b.toString());
             Map<?, ?> resultsFromData = conn.transact(datomic.Util.list(aTxn)).get();
@@ -91,31 +105,34 @@ public class LoadPayment {
 
         rs.close();
         pgConn.close();
-
+        
         // Get the database, to get a fresh copy.
         Database db = conn.db();
         System.out.println("Peer connected to the datbase : " + db);
 
-        System.out.println("Printing payments...");
-        String q = "[:find ?v1 ?v2 ?v3 ?v4 ?v5 ?v6 :where " + 
-        "[?e :payment/payment_id ?v1]" + 
-        "[?e :payment/customer_id ?v2]" + 
-        "[?e :payment/staff_id ?v3]" + 
-        "[?e :payment/rental_id ?v4] " +
-        "[?e :payment/amount ?v5] " +
-        "[?e :payment/payment_date ?v6] " +
-        " ]";
+        System.out.println("Printing out staff...");
+        String q = "[:find ?v1 ?v2 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 ?v10 :where " + 
+            "[?e :staff/store_id ?v1]" + 
+            "[?e :staff/first_name ?v2]" +
+            "[?e :staff/last_name ?v3]" + 
+            "[?e :staff/address_id ?v4]" +
+            "[?e :staff/email ?v5]" +
+            "[?e :staff/store_id ?v6]" +
+            "[?e :staff/active ?v7]" +
+            "[?e :staff/username ?v8]" +
+            "[?e :staff/password ?v9]" +
+            "[?e :staff/last_update ?v10]" +
+            "]";
 
         getResults(db, q);
 
-        System.out.println("Printing out payments count...");
-        q = "[:find (count ?aid) . :where [?aid :payment/payment_id ]]";
+        System.out.println("Printing out staff count...");
+        q = "[:find (count ?aid) . :where [?aid :staff/staff_id ]]";
         getResults(db, q);
-
         if (args != null && args.length == 1 && args[0].equalsIgnoreCase("true")) {
             //Stand-alone run, can kill session to allow maven to terminate.
             System.exit(0);
-        }         
+        }
     }
 
     private static void getResults(Database db, String q) {
@@ -137,5 +154,6 @@ public class LoadPayment {
         } else if( res instanceof Integer) {
             System.out.println( "Result is : " + res );
         }
-    }            
+    }
+   
 }
