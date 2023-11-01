@@ -85,4 +85,5 @@ mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadCustomer"
 mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadFilm"
 mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadInventory"
 mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadRental"
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadPayment"
 </pre>
