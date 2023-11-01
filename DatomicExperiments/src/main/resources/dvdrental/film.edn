@@ -1,0 +1,58 @@
+{ :db/ident :film/film_id
+  :db/unique :db.unique/identity
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "The film ID"}
+{ :db/ident :film/title
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The film's title"}
+{ :db/ident :film/description
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The film's desc"} 
+{ :db/ident :film/release_year
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "The film's release year"}
+{ :db/ident :film/language
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The film's language"}
+{ :db/ident :film/rental_duration
+  :db/valueType :db.type/double
+  :db/cardinality :db.cardinality/one
+  :db/doc "The film's rental duration"}          
+{ :db/ident :film/rental_rate
+  :db/valueType :db.type/double
+  :db/cardinality :db.cardinality/one
+  :db/doc "The film's rental rate"}          
+{ :db/ident :film/length
+  :db/valueType :db.type/double
+  :db/cardinality :db.cardinality/one
+  :db/doc "The film's length"}          
+{ :db/ident :film/replacement_cost
+  :db/valueType :db.type/double
+  :db/cardinality :db.cardinality/one
+  :db/doc "The film's replacement cost"}
+{ :db/ident :film/rating
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The film's rating"}
+{ :db/ident :film/last_update
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db/doc "Last update ts"}   
+{ :db/ident :film/special_features
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The film's special features"}
+{ :db/ident :film/fulltext
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The film's full text"}              
+{ :db/ident :film/category_id
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The film's category"}
+
