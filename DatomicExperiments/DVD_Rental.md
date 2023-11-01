@@ -72,9 +72,13 @@ dvdrental=# \dt
 cd C:\Venky\datomic-experiment\datomicexperiments\DatomicExperiments
 mvn clean package
 
-mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.ActorsLoad"
-mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.AddressLoad"
-mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.CategoriesLoad"
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.ActorsLoad" -Dexec.args="true"
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.AddressLoad" -Dexec.args="true"
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.CategoriesLoad"  -Dexec.args="true" 
+
+## Don't pass true, otherwise it will terminate after the first dependent load...
+## These programs will load more than one dependent entity and then load the main ## one.
+
 mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadStore"
 mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadStaff"
 mvn exec:java -Dexec.mainClass="com.gssystems.datomic.postgres.LoadCustomer"

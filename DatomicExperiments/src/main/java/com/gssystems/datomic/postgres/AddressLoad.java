@@ -38,9 +38,7 @@ public class AddressLoad {
         }
 
         String uri = "datomic:mem://dvdrental";
-
-        System.out.println("Creating a new database called dvdrental...");
-        Peer.createDatabase(uri);
+        CreateDatabase.main(args);
 
         Connection conn = Peer.connect(uri);
         System.out.println("Applying the schema to the database we created...");
@@ -98,6 +96,9 @@ public class AddressLoad {
             //System.out.println(resultsFromData);
         }
 
+        rs.close();
+        pgConn.close();
+
         // Get the database, to get a fresh copy.
         Database db = conn.db();
         System.out.println("Peer connected to the datbase : " + db);
@@ -107,13 +108,14 @@ public class AddressLoad {
 
         getResults(db, q);
 
-        System.out.println("Printing out actor count...");
+        System.out.println("Printing out addresses count...");
         q = "[:find (count ?aid) . :where [?aid :address/address_id ]]";
         getResults(db, q);
 
-        //Address loads are called by other program for in-mem testing, 
-        //Need to uncomment it later on when we test against docker.
-        //System.exit(0);
+        if (args != null && args.length == 1 && args[0].equalsIgnoreCase("true")) {
+            //Stand-alone run, can kill session to allow maven to terminate.
+            System.exit(0);
+        }
     }
 
     private static void getResults(Database db, String q) {

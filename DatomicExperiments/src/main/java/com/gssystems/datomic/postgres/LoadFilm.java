@@ -3,8 +3,10 @@ package com.gssystems.datomic.postgres;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -54,11 +56,14 @@ public class LoadFilm {
             e.printStackTrace();
         }
 
-
         String uri = "datomic:mem://dvdrental";
-        
-        //Call address loads!
-        CategoriesLoad.main(args);
+
+        //Create database passing true. 
+        CreateDatabase.main(new String[] {"true"});
+
+        //Call store loads! Passing null as args will bypass create database.
+        ActorsLoad.main(null);
+        CategoriesLoad.main(null);
 
         //System.out.println("Creating a new database called dvdrental...");
         //Peer.createDatabase(uri);
@@ -81,6 +86,12 @@ public class LoadFilm {
         java.sql.Statement st = pgConn.createStatement();
         java.sql.ResultSet rs = st.executeQuery(QUERY);
 
+        //We need to do a lookup on the 1:M relationship between the film and its actors. 
+        //Then we need to point to the actor_ids the film has and add it as a collection.
+
+        String actorLookupQuery = "SELECT actor_id from film_actor where film_id = ?";
+        PreparedStatement ps1 = pgConn.prepareStatement(actorLookupQuery);
+
         SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
         SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm:ss");
 
@@ -99,6 +110,19 @@ public class LoadFilm {
             String special_features = rs.getString("special_features");
             String fulltext = rs.getString("fulltext");
             long category_id = rs.getLong("category_id");
+
+            //Now we need to get the actor ids and add them to a collection to 
+            //link the film to its actors...
+            ps1.setLong(1, film_id);
+            java.sql.ResultSet rs2 = ps1.executeQuery();
+            List<String> actorIds = new ArrayList<>();
+            while(rs2.next()) {
+                Long anActorId = rs2.getLong("actor_id");
+                actorIds.add("[:actor/actor_id " + anActorId +  "]");
+            }
+
+            rs2.close();
+            //System.out.println(actorIds);
            
             System.out.println("Inserting row into Datomic :" + film_id);
             StringBuffer b = new StringBuffer();
@@ -122,6 +146,8 @@ public class LoadFilm {
 
             //Reference to the category object...
             b.append(" :film/category_id [:category/category_id " + category_id + "]");
+            b.append(" :film/actors " + actorIds.toString());
+
             b.append("}");
 
             //System.out.println( b.toString());
@@ -131,12 +157,15 @@ public class LoadFilm {
             //System.out.println(resultsFromData);
         }
 
+        rs.close();
+        pgConn.close();
+
         // Get the database, to get a fresh copy.
         Database db = conn.db();
         System.out.println("Peer connected to the datbase : " + db);
 
         System.out.println("Printing out fimns...");
-        String q = "[:find ?v1 ?v2 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 ?v10 ?v11 ?v12 ?v13 ?v14 :where " + 
+        String q = "[:find ?v1 ?v2 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 ?v10 ?v11 ?v12 ?v13 ?v14 ?v15 :where " + 
         "[?e :film/film_id ?v1]" + 
         "[?e :film/title ?v2]" +
         "[?e :film/description ?v3]" + 
@@ -151,6 +180,7 @@ public class LoadFilm {
         "[?e :film/special_features ?v12]" +
         "[?e :film/fulltext ?v13]" +
         "[?e :film/category_id ?v14]" +
+        "[?e :film/actors ?v15]" +
         "]";
 
         getResults(db, q);

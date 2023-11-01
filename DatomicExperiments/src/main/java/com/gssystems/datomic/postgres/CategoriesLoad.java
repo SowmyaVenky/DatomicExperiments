@@ -81,6 +81,9 @@ public class CategoriesLoad {
             System.out.println(resultsFromData);
         }
 
+        rs.close();
+        pgConn.close();
+        
         // Get the database, to get a fresh copy.
         Database db = conn.db();
         System.out.println("Peer connected to the datbase : " + db);
@@ -93,8 +96,10 @@ public class CategoriesLoad {
         System.out.println("Printing out category count...");
         q = "[:find (count ?aid) . :where [?aid :category/category_id ]]";
         getResults(db, q);
-
-        //System.exit(0);
+        if (args != null && args.length == 1 && args[0].equalsIgnoreCase("true")) {
+            //Stand-alone run, can kill session to allow maven to terminate.
+            System.exit(0);
+        }
     }
 
     private static void getResults(Database db, String q) {

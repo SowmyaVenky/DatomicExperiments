@@ -34,12 +34,11 @@ public class LoadStaff {
 
 
         String uri = "datomic:mem://dvdrental";
-        
-        //Call store loads!
-        LoadStore.main(args);
+        //Create database passing true. 
+        CreateDatabase.main(new String[] {"true"});
 
-        //System.out.println("Creating a new database called dvdrental...");
-        //Peer.createDatabase(uri);
+        //Call store loads! Passing null as args will bypass create database.
+        LoadStore.main(null);
 
         Connection conn = Peer.connect(uri);
         System.out.println("Applying the schema to the database we created...");
@@ -72,7 +71,7 @@ public class LoadStaff {
             String active = rs.getString("active");
             String username = rs.getString("username");
             String pw = rs.getString("password");
-            String picture = rs.getString("picture");
+            //String picture = rs.getString("picture");
 
             java.sql.Timestamp last_update = rs.getTimestamp("last_update");
 
@@ -104,6 +103,9 @@ public class LoadStaff {
             //System.out.println(resultsFromData);
         }
 
+        rs.close();
+        pgConn.close();
+        
         // Get the database, to get a fresh copy.
         Database db = conn.db();
         System.out.println("Peer connected to the datbase : " + db);
@@ -127,8 +129,10 @@ public class LoadStaff {
         System.out.println("Printing out staff count...");
         q = "[:find (count ?aid) . :where [?aid :staff/staff_id ]]";
         getResults(db, q);
-
-        System.exit(0);
+        if (args != null && args.length == 1 && args[0].equalsIgnoreCase("true")) {
+            //Stand-alone run, can kill session to allow maven to terminate.
+            System.exit(0);
+        }
     }
 
     private static void getResults(Database db, String q) {

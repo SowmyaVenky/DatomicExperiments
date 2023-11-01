@@ -34,8 +34,7 @@ public class ActorsLoad {
 
         String uri = "datomic:mem://dvdrental";
 
-        System.out.println("Creating a new database called dvdrental...");
-        Peer.createDatabase(uri);
+        CreateDatabase.main(args);
 
         Connection conn = Peer.connect(uri);
         System.out.println("Applying the schema to the database we created...");
@@ -80,8 +79,11 @@ public class ActorsLoad {
 
             Object aTxn = datomic.Util.read(b.toString());
             Map<?, ?> resultsFromData = conn.transact(datomic.Util.list(aTxn)).get();
-            System.out.println(resultsFromData);
+            //System.out.println(resultsFromData);
         }
+
+        rs.close();
+        pgConn.close();
 
         // Get the database, to get a fresh copy.
         Database db = conn.db();
@@ -96,7 +98,10 @@ public class ActorsLoad {
         q = "[:find (count ?aid) . :where [?aid :actor/actor_id ]]";
         getResults(db, q);
 
-        System.exit(0);
+        if (args != null && args.length == 1 && args[0].equalsIgnoreCase("true")) {
+            //Stand-alone run, can kill session to allow maven to terminate.
+            System.exit(0);
+        }         
     }
 
     private static void getResults(Database db, String q) {

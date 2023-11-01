@@ -55,4 +55,8 @@
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/one
   :db/doc "The film's category"}
+{ :db/ident :film/actors
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many
+  :db/doc "The film's category"}
 

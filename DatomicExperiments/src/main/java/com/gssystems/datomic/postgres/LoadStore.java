@@ -34,12 +34,11 @@ public class LoadStore {
 
 
         String uri = "datomic:mem://dvdrental";
-        
-        //Call address loads!
-        AddressLoad.main(args);
+        //Create database passing true. 
+        CreateDatabase.main(new String[] {"true"});
 
-        //System.out.println("Creating a new database called dvdrental...");
-        //Peer.createDatabase(uri);
+        //Call address loads! Passing null as args will bypass create database.
+        AddressLoad.main(args);
 
         Connection conn = Peer.connect(uri);
         System.out.println("Applying the schema to the database we created...");
@@ -90,6 +89,9 @@ public class LoadStore {
             //System.out.println(resultsFromData);
         }
 
+        rs.close();
+        pgConn.close();
+        
         // Get the database, to get a fresh copy.
         Database db = conn.db();
         System.out.println("Peer connected to the datbase : " + db);
@@ -103,7 +105,10 @@ public class LoadStore {
         q = "[:find (count ?aid) . :where [?aid :store/store_id ]]";
         getResults(db, q);
 
-        //System.exit(0);
+        if (args != null && args.length == 1 && args[0].equalsIgnoreCase("true")) {
+            //Stand-alone run, can kill session to allow maven to terminate.
+            System.exit(0);
+        }
     }
 
     private static void getResults(Database db, String q) {
