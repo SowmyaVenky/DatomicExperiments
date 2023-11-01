@@ -34,7 +34,8 @@ public class LoadFilm {
     "film.special_features,  " +
     "film.fulltext,  " +
     "film_category.category_id  " +
-    " from film left outer join film_category on film.film_id = film_category.film_id left outer join language on film.language_id = language.language_id";
+    " from film left outer join film_category on film.film_id = film_category.film_id " + 
+    " left outer join language on film.language_id = language.language_id";
 
     public static void main(String[] args) throws Exception {
 
@@ -98,7 +99,7 @@ public class LoadFilm {
             String special_features = rs.getString("special_features");
             String fulltext = rs.getString("fulltext");
             long category_id = rs.getLong("category_id");
-
+           
             System.out.println("Inserting row into Datomic :" + film_id);
             StringBuffer b = new StringBuffer();
             b.append("{");
