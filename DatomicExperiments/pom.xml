@@ -25,12 +25,16 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-
+    <dependency>
+        <groupId>com.datomic</groupId>
+        <artifactId>local</artifactId>
+        <version>1.0.267</version>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/com.datomic/datomic-free -->
     <dependency>
         <groupId>com.datomic</groupId>
         <artifactId>peer</artifactId>
-        <version>1.0.6726</version>
+        <version>1.0.7021</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
     <dependency>

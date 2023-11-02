@@ -6,7 +6,7 @@
 ## Go to the data directory before launching the docker instance. 
 cd C:\venky\DatomicExperiments\data
 
-docker run -d -e ADMIN_PASSWORD="admin" -e DATOMIC_PASSWORD="datomic" -p 4334-4336:4334-4336 --name datomic-free -v %cd%:/datomic/data akiel/datomic-free 
+docker run -d -e ADMIN_PASSWORD="admin" -e DATOMIC_PASSWORD="datomic" -p 4334-4336:4334-4336 --name datomic-free -v %cd%:/data akiel/datomic-free 
 
 C:\Venky\DatomicExperiments\data>docker ps
 CONTAINER ID   IMAGE                COMMAND        CREATED         STATUS         PORTS                              NAMES
