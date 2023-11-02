@@ -1,0 +1,25 @@
+{ :db/ident :payment/payment_id
+  :db/unique :db.unique/identity
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "The payment ID"}
+{ :db/ident :payment/customer_id
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The customer id"}
+{ :db/ident :payment/staff_id
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The staff id"}
+{ :db/ident :payment/rental_id
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The rental id"}
+{ :db/ident :payment/amount
+  :db/valueType :db.type/double
+  :db/cardinality :db.cardinality/one
+  :db/doc "The amount"}
+{ :db/ident :payment/payment_date
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db/doc "Last payment ts"}  

@@ -1,5 +1,4 @@
 package com.gssystems.datomic.docker;
-import datomic.Peer;
 
 /*
 Note this class. Now we are not using the in-mem version of the database.
@@ -10,8 +9,6 @@ public class CreateDatabase {
     public static void main(String[] args) {
         String uri = "datomic:free://localhost:4334/dvdrental";
         System.out.println("Creating a new database called dvdrental...");
-        boolean res = Peer.createDatabase(uri);   
-        System.out.println("Create database result: " + res);
         System.exit(0);     
     }
 }
