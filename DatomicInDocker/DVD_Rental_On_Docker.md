@@ -28,6 +28,7 @@ user=> (d/get-database-names "datomic:free://localhost:4334/*")
 cd C:\Venky\datomic-experiment\datomicexperiments\DatomicExperiments
 mvn clean package
 
+mvn exec:java -Dexec.mainClass="com.gssystems.datomic.docker.CreateDatabase"
 mvn exec:java -Dexec.mainClass="com.gssystems.datomic.docker.ActorsLoad"
 
 root@179c39a1924a:/datomic# bin/datomic restore-db file:///datomic/mbrainz-1968-1973/ "datomic:free://localhost:4334/mbrainz-1968-1973"
@@ -37,3 +38,10 @@ Copied 1414 segments, skipped 0 segments.
 {:event :restore, :db mbrainz-1968-1973, :basis-t 148253, :inst #inst "2017-07-20T16:07:40.880-00:00"}
 
 </pre>
+
+
+bin/transactor -Ddatomic.printConnectionInfo=true config/dev-transactor-template.properties
+
+docker run -d -p 4334-4336:4334-4336 --name datomic-pro -v %cd%:/datomic/ -v C:\Venky\DatomicExperiments:/project/ ubuntu tail -f /dev/null
+
+docker run -ti -p 4334-4336:4334-4336 --name datomic-pro -v %cd%:/datomic/ --rm ubuntu /bin/bash

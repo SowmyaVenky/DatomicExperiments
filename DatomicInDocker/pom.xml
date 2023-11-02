@@ -27,8 +27,8 @@
     </dependency>
     <dependency>
         <groupId>com.datomic</groupId>
-        <artifactId>local</artifactId>
-        <version>1.0.267</version>
+        <artifactId>peer</artifactId>
+        <version>1.0.7021</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
     <dependency>
