@@ -6,7 +6,7 @@
 
 <img src="./DatomicInMem/images/datomic_db_deconstructed.png" />
 
-* This guide shows how to use docker to run datomic locally. This is pretty much a pre-requisite for almost all the other experiments we do. More details on this <a href="./docker-run/README.md">here</a>
+* This guide shows how to use docker to run datomic locally. This is a free verion of datomic that someone has put together. It serves as a simple introduction to starting docker and loading the mbrainz dataset and query it. The only issue is that it is dependent on a custom library, and does not work with the Peer libraries published by Datomic in the maven central repo.  More details on this <a href="./docker-run/README.md">here</a>
 
 * This guide follows the movies tutorial that is part of the datomic documentation. More details are <a href="./DatomicInMem/README.md">here</a>
 

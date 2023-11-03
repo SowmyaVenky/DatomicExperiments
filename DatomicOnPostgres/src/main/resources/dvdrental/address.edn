@@ -1,0 +1,37 @@
+{ :db/ident :address/address_id
+  :db/unique :db.unique/identity
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "The address ID"}
+{ :db/ident :address/address
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The address"}
+{ :db/ident :address/address2
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The address2"}  
+{ :db/ident :address/district
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The district"}
+{ :db/ident :address/city
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The city"}  
+{ :db/ident :address/country
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The country"}  
+{ :db/ident :address/postal_code
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The postal code"}  
+{ :db/ident :address/phone
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The phone"}  
+{ :db/ident :actor/last_update
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db/doc "Last update ts"}

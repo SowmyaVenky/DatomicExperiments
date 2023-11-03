@@ -1,0 +1,31 @@
+version: '3.9'
+
+networks:
+  backend:
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - C:\Venky\datomic-pro-1.0.7021\postgres\:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=Ganesh20022002
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=testdb
+    networks:
+      - backend
+
+  ubuntu-datomic:
+    container_name: ubuntu
+    image: ubuntu
+    restart: on-failure
+    command: ["sleep","infinity"]
+    ports:
+      - 4334-4336:4334-4336
+    volumes:
+      - C:\Venky\datomic-pro-1.0.7021\:/datomic
+    networks:
+      - backend

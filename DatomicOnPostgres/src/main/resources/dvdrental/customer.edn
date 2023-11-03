@@ -1,0 +1,41 @@
+{ :db/ident :customer/customer_id
+  :db/unique :db.unique/identity
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "The customer ID"}  
+{ :db/ident :customer/store_id
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The customer store ref"}
+{ :db/ident :customer/first_name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The customer first name"}
+{ :db/ident :customer/last_name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The customer last name"}
+{ :db/ident :customer/email
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The customer email"}
+{ :db/ident :customer/address_id
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The customer address"}
+{ :db/ident :customer/activebool
+  :db/valueType :db.type/boolean
+  :db/cardinality :db.cardinality/one
+  :db/doc "The customer active flag"}
+{ :db/ident :customer/create_date
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db/doc "Create date"}
+{ :db/ident :customer/last_update
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db/doc "Last update ts"}
+{ :db/ident :customer/active
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "The customer active int"}
