@@ -13,3 +13,5 @@
 * This guide follows the Seattle Data tutorial. Seattle has many communities and this data is represented inside Datomic using a bunch of constructs like enums. More details are <a href="./DatomicInMem/Seattle-Data.md">here</a>
 
 * This guide takes the sample postgres database we get as part of postgres documentation. It is called dvdrental and contains data about the dvd rental store. We take the data from Postgres and load it into Datomic after reformating and creating the required schemas. This is a comprehensive example that shows how we can use Datomic for non-trivial use-cases. More details are <a href="./DatomicInMem/DVD_Rental.md">here</a>
+
+* This guide walks through how to download datomic pro from the website, and setup a docker container based on ubuntu. We will then start the transactor from the ubunto container and connect to it remotely from the local comouter. We need to tweak a few settings to make it work on docker and load the data from the local system. More details are <a href="./DatomicInDocker/DVD_Rental_On_Docker.md">here</a>

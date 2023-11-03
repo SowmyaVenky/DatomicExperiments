@@ -271,6 +271,8 @@ Result is : 14596
 </pre>
 
 * We can also restore the mbrianz dataset from the Datomic examples and restore it
+
+<pre>
 wget https://s3.amazonaws.com/mbrainz/datomic-mbrainz-1968-1973-backup-2017-07-20.tar -O mbrainz.tar
 tar -xvf mbrainz.tar
 
