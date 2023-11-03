@@ -30,7 +30,7 @@ public class CategoriesLoad {
             e.printStackTrace();
         }
 
-        String uri = "datomic:dev://localhost:4334/dvdrental";
+        String uri = Constants.DATOMIC_URL;
 
         System.out.println("Creating a new database called dvdrental...");
 

@@ -29,7 +29,7 @@ public class LoadStore {
             e.printStackTrace();
         }
 
-        String uri = "datomic:dev://localhost:4334/dvdrental";
+        String uri = Constants.DATOMIC_URL;
         Connection conn = Peer.connect(uri);
         System.out.println("Applying the schema to the database we created...");
 
