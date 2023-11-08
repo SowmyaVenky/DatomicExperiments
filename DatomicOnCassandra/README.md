@@ -433,20 +433,19 @@ cassandra@cqlsh:datomic> select * from datomic limit 10;
 ## Important NOTES 
 * I had a lot of problems getting this to work with abscure errors. Everything failed with some kind of SSL auth error or Tag mismatch error. I found that we needed to have these 2 maven imports on here to get it to work. For using the datastax oss library, I could do that with the native java program, but not via datomic. 
 
-<pre>    
+```
     <dependency>
       <groupId>com.datastax.cassandra</groupId>
       <artifactId>cassandra-driver-core</artifactId>
       <version>3.1.0</version>
     </dependency>
     
-    <!-- https://mvnrepository.com/artifact/com.codahale.metrics/metrics-core -->
     <dependency>
         <groupId>com.codahale.metrics</groupId>
         <artifactId>metrics-core</artifactId>
         <version>3.0.2</version>
     </dependency>
-<pre>
+```
 
 <pre>
 bin/repl
