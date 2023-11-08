@@ -5,17 +5,17 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.gssystems.datomic</groupId>
-  <artifactId>DatomicInPostgres</artifactId>
+  <artifactId>DatomicInCassandra</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>DatomicInPostgres</name>
+  <name>DatomicInCassandra</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -53,6 +53,25 @@
         <groupId>org.postgresql</groupId>
         <artifactId>postgresql</artifactId>
         <version>42.6.0</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.datastax.oss</groupId>
+      <artifactId>java-driver-core</artifactId>
+      <version>4.17.0</version>
+    </dependency> 
+    
+    <dependency>
+      <groupId>com.datastax.cassandra</groupId>
+      <artifactId>cassandra-driver-core</artifactId>
+      <version>3.1.0</version>
+    </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/com.codahale.metrics/metrics-core -->
+    <dependency>
+        <groupId>com.codahale.metrics</groupId>
+        <artifactId>metrics-core</artifactId>
+        <version>3.0.2</version>
     </dependency>
 
   </dependencies>
